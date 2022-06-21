@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--color-primary);
+}
+
+.logo h4 {
+  color: var(--color-background-two);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.nav-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: var(--color-background-two);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/// Landscape Below 1200px
+
+@media (max-width: 75em) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+// Small Tablet Below 704px
+@media (max-width: 44em) {
+  .nav-links {
+    width: 40%;
+  }
+}
