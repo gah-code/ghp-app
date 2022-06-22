@@ -28,14 +28,44 @@ header {
 .description {
   // font-family: "Warm Memories Regular";
   // font-family: "Lumiera Handwriting";
+  font-family: 'Lumiera';
   font-size: 1.8rem;
   line-height: 1.6;
   margin: 0.5rem;
   padding: 0.3rem 0;
-  color: #444;
+  color: rgb(43, 43, 43);
+  text-transform: lowercase;
 }
 
 .hero-img {
   transform: rotateZ(-3deg);
   width: 100%;
+  height: min(45vh, 600px);
+  object-fit: cover;
+  // object-position: 5vw 5vmin;
+}
+
+@media (max-width: 44em) {
+  header {
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+    align-items: center;
+    padding: 0 3rem;
+  }
+
+  .hero-text-box {
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .hero-img {
+    padding: 0 1rem;
+    height: min(40vh, 600px);
+  }
 }

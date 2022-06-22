@@ -1,6 +1,7 @@
 import HeaderBox from './HeaderBox';
 import './Header.scss';
 // import HeroImage from '../../img/hero-image.png';
+import HeroImg from '../../Images/hero-img.jpg';
 
 const Header = () => {
   return (
@@ -8,8 +9,8 @@ const Header = () => {
       <header>
         <HeaderBox />
         <div className="hero-img-box">
-          test
-          {/* <img className="hero-img" alt="hero-img" src={HeroImage} /> */}
+
+          <img className="hero-img" alt="hero-img" src={HeroImg} />
         </div>
       </header>
     </section>

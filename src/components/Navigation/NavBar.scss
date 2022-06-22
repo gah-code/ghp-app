@@ -7,9 +7,11 @@ nav {
 }
 
 .logo h4 {
+  font-family: 'Lumiera Handwriting';
   color: var(--color-background-two);
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  // text-transform: lowercase;
+  letter-spacing: 1.8px;
+  font-size: 2.5em;
 }
 
 .nav-links {
@@ -25,8 +27,8 @@ nav {
   color: var(--color-background-two);
   text-decoration: none;
   letter-spacing: 2px;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 /// Landscape Below 1200px
@@ -39,7 +41,16 @@ nav {
 
 // Small Tablet Below 704px
 @media (max-width: 44em) {
+  nav {
+    align-items: center;
+    min-height: 6.5vh;
+  }
+
   .nav-links {
     width: 40%;
+  }
+
+  .nav-links a {
+    font-size: 1.4rem;
   }
 }

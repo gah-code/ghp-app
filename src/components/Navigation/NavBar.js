@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <nav>
       <div className="logo">
-        <h4> GAH Photo</h4>
+        <h4> GahPhotography</h4>
       </div>
       <ul className="nav-links">
         <li><a onClick={foo} href="3" alt="">Services</a></li>

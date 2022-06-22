@@ -12,7 +12,23 @@
   --color-background-two: #eaeede;
   --color-background: rgb(255, 255, 255);
 
-  --color-text: #233349;
-  --color-blue: #7794be;
+  --color-blue-dark: #233349;
+  --color-blue-light: #7794be;
   --color-black: #000;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  // Help prevent overflow of long words/names/URLs
+  word-break: break-word;
+
+  // Optional, not supported for all languages:
+  hyphens: auto;
+
+  // Clear top margin
+  margin-top: 0;
 }
