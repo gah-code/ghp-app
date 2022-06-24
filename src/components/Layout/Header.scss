@@ -17,6 +17,7 @@ header {
 
 .hero-text-box {
   padding: 0 0.1rem;
+  // background-color: var(--co);
 
   h1 {
     font-weight: 500;
@@ -26,15 +27,12 @@ header {
 }
 
 .description {
-  // font-family: "Warm Memories Regular";
-  // font-family: "Lumiera Handwriting";
-  font-family: 'Lumiera';
+  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
   margin: 0.5rem;
   padding: 0.3rem 0;
   color: rgb(43, 43, 43);
-  text-transform: lowercase;
 }
 
 .hero-img {
@@ -50,18 +48,19 @@ header {
     grid-template-columns: 1fr;
     gap: 3.6rem;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   .hero-text-box {
-    padding: 3rem;
+    padding: 0.5rem;
     text-align: center;
   }
 
   .description {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    padding: 1.5rem 0;
   }
 
   .hero-img {

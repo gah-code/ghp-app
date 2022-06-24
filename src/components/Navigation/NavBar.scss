@@ -24,11 +24,29 @@ nav {
   list-style: none;
 }
 .nav-links a {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
   color: var(--color-background-two);
   text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 400;
+  letter-spacing: 1.3px;
   font-size: 1.6rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  border: none;
+  transition-duration: 350ms;
+  transition-timing-function: ease 0.3s;
+
+  &:link,
+  &:visited {
+    color: var(--color-background-two);
+  }
+
+  &:hover,
+  &:active {
+    color: var(--color-primary-dark);
+    font-size: 1.7rem;
+    transform: translateY(-4px);
+  }
 }
 
 /// Landscape Below 1200px
@@ -46,11 +64,16 @@ nav {
     min-height: 6.5vh;
   }
 
+  .logo h4 {
+    letter-spacing: 1.8px;
+    font-size: 2.4em;
+  }
+
   .nav-links {
-    width: 40%;
+    width: 50%;
   }
 
   .nav-links a {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }

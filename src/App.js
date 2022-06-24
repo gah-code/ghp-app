@@ -1,5 +1,7 @@
 import NavBar from './components/Navigation/NavBar';
 import Header from './components/Layout/Header';
+import Services from './components/Misc/Services';
+// import AvailableServices from './components/Misc/AvailableServices';
 
 import '../src/styles/main.scss';
 
@@ -9,8 +11,7 @@ function App () {
 
       <NavBar />
       <Header />
-
-      Services
+      <Services />
 
     </div>
   );

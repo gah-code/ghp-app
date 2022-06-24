@@ -22,10 +22,13 @@
 
 ```text
 ├──public 
-├── src
-│   ├── components
-│   │  ├── Layout
-│   │  ├── Misc
+├── /src
+│   ├── /components
+│   │  ├── /Layout
+│   │  │     ├── About.js
+│   │  │     ├── Header.js
+│   │  ├── /Misc
+│   │  │     ├── AvailableServices.js
 │   │  ├── Navigation
 │   ├── images
 │   ├── styles

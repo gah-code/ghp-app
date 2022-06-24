@@ -1,0 +1,33 @@
+// Button Styling Resets
+$btnColor: #3e68ff;
+
+a.button {
+  text-decoration: none;
+}
+
+// Reset default button styles
+button.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+a.button,
+button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  // Visual
+  // ... existing styles
+  background-color: $btnColor;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+}
