@@ -1,5 +1,6 @@
 import ServiceItem from './ServiceItem';
 import './services.scss';
+import WeddingImg from '../../assets/wedding-section.png';
 // import TestImg from '../../img/img-test.png';
 // import familyImg from '../../img/family-service.png';
 // import classes from './Services.module.scss';
@@ -34,8 +35,13 @@ const AvailableServices = () => {
 
   return (
     <section className="section-service">
-      <div key={WEDDING_PHOTOGRAPHY}>
-        {serviceList}
+      <div className="container grid grid--2-cols grid--center-v">
+        <div key={WEDDING_PHOTOGRAPHY}>
+          {serviceList}
+        </div>
+        <div className="service-img-box">
+          <img className="service-img" src={WeddingImg} alt="" />
+        </div>
       </div>
 
     </section>
