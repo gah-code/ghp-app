@@ -1,3 +1,5 @@
+import './Header.scss';
+
 const HeroBox = () => {
   return (
     <div className="hero-text-box">

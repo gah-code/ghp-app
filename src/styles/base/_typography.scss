@@ -46,6 +46,16 @@ strong {
 
 @media (max-width: 44em) {
   .heading-primary {
-    font-size: 4.9rem;
+    font-size: 4.5rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.8rem;
+    margin-bottom: 9rem;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 }

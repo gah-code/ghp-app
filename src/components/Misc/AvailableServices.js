@@ -15,18 +15,30 @@ const WEDDING_PHOTOGRAPHY = [
   },
 ];
 
-// const FAMILY_PHOTOGRAPHY = [
-//   {
-//     id: 2,
-//     number: '02',
-//     title: 'Family photograhy',
-//     description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
-//   },
-// ];
+const FAMILY_PHOTOGRAPHY = [
+  {
+    id: 2,
+    number: '02',
+    title: 'Family photograhy',
+    description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
+  },
+];
 
 const AvailableServices = () => {
   const serviceList = WEDDING_PHOTOGRAPHY.map (service => (
     <ServiceItem
+      key={service.id}
+      id={service.id}
+      number={service.number}
+      title={service.title}
+      description={service.description}
+    />
+  ));
+
+  const serviceListTwo = FAMILY_PHOTOGRAPHY.map (service => (
+    <ServiceItem
+      key={service.id}
+      id={service.id}
       number={service.number}
       title={service.title}
       description={service.description}
@@ -35,12 +47,25 @@ const AvailableServices = () => {
 
   return (
     <section className="section-service">
-      <div className="container grid grid--2-cols grid--center-v">
+      <div class="container">
+        <span class="subheading">Photography services</span>
+        <h2 class="heading-secondary">
+          Capturing new beginnings and next chapters
+        </h2>
+      </div>
+
+      <div className="grid-container grid grid--2-cols ">
         <div key={WEDDING_PHOTOGRAPHY}>
           {serviceList}
         </div>
         <div className="service-img-box">
           <img className="service-img" src={WeddingImg} alt="" />
+        </div>
+        <div className="service-img-box">
+          <img className="service-img" src={WeddingImg} alt="" />
+        </div>
+        <div key={FAMILY_PHOTOGRAPHY}>
+          {serviceListTwo}
         </div>
       </div>
 

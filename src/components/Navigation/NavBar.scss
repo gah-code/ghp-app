@@ -9,14 +9,16 @@ nav {
 .logo h4 {
   font-family: 'Lumiera Handwriting';
   color: var(--color-background-two);
+  transform: rotateZ(1deg);
   // text-transform: lowercase;
-  letter-spacing: 1.8px;
-  font-size: 2.5em;
+  letter-spacing: 1.9px;
+  font-size: 3em;
 }
 
 .nav-links {
   display: flex;
   width: 30%;
+
   justify-content: space-around;
 }
 
@@ -29,7 +31,7 @@ nav {
   color: var(--color-background-two);
   text-decoration: none;
   letter-spacing: 1.3px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-transform: lowercase;
   cursor: pointer;
   border: none;
@@ -49,11 +51,22 @@ nav {
   }
 }
 
-/// Landscape Below 1200px
+@media (max-width: 84em) {
+  .nav-links {
+    width: 45%;
+  }
+}
 
+/// Landscape Below 1200px
 @media (max-width: 75em) {
   .nav-links {
-    width: 60%;
+    width: 55%;
+  }
+}
+
+@media (max-width: 59em) {
+  .nav-links {
+    width: 50%;
   }
 }
 
@@ -66,14 +79,24 @@ nav {
 
   .logo h4 {
     letter-spacing: 1.8px;
-    font-size: 2.4em;
-  }
-
-  .nav-links {
-    width: 50%;
+    font-size: 2.2em;
   }
 
   .nav-links a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .nav-links {
+    width: 45%;
+  }
+
+  .logo h4 {
+    font-size: 2em;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
   }
 }

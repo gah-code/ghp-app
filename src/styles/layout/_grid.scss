@@ -5,6 +5,12 @@
   padding: 0 3.2rem;
 }
 
+.grid-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
@@ -20,4 +26,35 @@
 }
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 84em) {
+  .grid-container {
+    column-gap: 5rem;
+    row-gap: 7rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .grid-container {
+    column-gap: 4.5rem;
+    row-gap: 6.9rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .grid-container {
+    row-gap: 6.8rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .grid-container {
+    row-gap: 6.5rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
 }

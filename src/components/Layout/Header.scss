@@ -9,7 +9,7 @@ header {
   max-height: 600px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.9fr 1.2fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 9.6rem;
   align-items: center;
   padding: 0 3.2rem;
@@ -43,28 +43,50 @@ header {
   // object-position: 5vw 5vmin;
 }
 
+@media (max-width: 84em) {
+  header {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 75em) {
+  header {
+    padding: 0 2.9rem;
+    gap: 7rem;
+  }
+}
+
+@media (max-width: 59em) {
+  header {
+    padding: 0 2rem;
+    gap: 5rem;
+  }
+
+  .hero-img {
+    width: 95%;
+    height: min(42vh, 600px);
+  }
+}
+
 @media (max-width: 44em) {
   header {
     grid-template-columns: 1fr;
-    gap: 3.6rem;
+    gap: 4rem;
     align-items: center;
     padding: 0 2rem;
   }
 
   .hero-text-box {
-    padding: 0.5rem;
+    padding: 0.2rem;
     text-align: center;
   }
 
   .description {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin: 1rem;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
+    font-size: 1.4rem;
   }
 
   .hero-img {
-    padding: 0 1rem;
     height: min(40vh, 600px);
   }
 }
