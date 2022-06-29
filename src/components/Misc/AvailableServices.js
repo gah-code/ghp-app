@@ -1,15 +1,14 @@
 import ServiceItem from './ServiceItem';
 import './services.scss';
 import WeddingImg from '../../assets/wedding-section.png';
-// import TestImg from '../../img/img-test.png';
-// import familyImg from '../../img/family-service.png';
-// import classes from './Services.module.scss';
-// import Container from '../../components/UI/Container.js';
+import {
+  ReactComponent as IconSvg,
+} from '../../assets/icons/Wedding-Expanded-Live-Stroke-Individual_Bride-Groom-Celebrate.svg';
 
 const WEDDING_PHOTOGRAPHY = [
   {
     id: 1,
-    number: '01',
+    icon: <IconSvg height={295} width={245} />,
     title: 'Wedding photograhy',
     description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
   },
@@ -18,7 +17,7 @@ const WEDDING_PHOTOGRAPHY = [
 const FAMILY_PHOTOGRAPHY = [
   {
     id: 2,
-    number: '02',
+    icon: <IconSvg height={295} width={245} />,
     title: 'Family photograhy',
     description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
   },
@@ -29,7 +28,7 @@ const AvailableServices = () => {
     <ServiceItem
       key={service.id}
       id={service.id}
-      number={service.number}
+      icon={service.icon}
       title={service.title}
       description={service.description}
     />
@@ -39,7 +38,7 @@ const AvailableServices = () => {
     <ServiceItem
       key={service.id}
       id={service.id}
-      number={service.number}
+      icon={service.icon}
       title={service.title}
       description={service.description}
     />
@@ -56,6 +55,7 @@ const AvailableServices = () => {
 
       <div className="grid-container grid grid--2-cols ">
         <div key={WEDDING_PHOTOGRAPHY}>
+
           {serviceList}
         </div>
         <div className="service-img-box">

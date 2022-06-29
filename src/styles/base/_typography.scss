@@ -13,7 +13,6 @@
 
 .heading-primary {
   font-family: 'Lumiera';
-  // font-family: "Lumiera Handwriting";
   font-size: 5.5rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
@@ -44,6 +43,24 @@ strong {
   font-weight: 500;
 }
 
+@media (max-width: 84em) {
+  .heading-tertiary {
+    margin-bottom: 2.8rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .heading-tertiary {
+    margin-bottom: 2.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .heading-tertiary {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 44em) {
   .heading-primary {
     font-size: 4.5rem;
@@ -52,6 +69,10 @@ strong {
   .heading-secondary {
     font-size: 3.8rem;
     margin-bottom: 9rem;
+  }
+  .heading-tertiary {
+    font-size: 2.7rem;
+    margin-bottom: 1.8rem;
   }
 
   .subheading {
