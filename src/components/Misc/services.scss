@@ -1,45 +1,105 @@
 .section-service {
   padding: 12.6rem 0;
 }
+.service-text-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
 
-// .step-number
-.number {
-  font-size: 9.8rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 1.2rem;
+  h3 {
+    align-self: flex-start;
+    margin: 0.7rem 0;
+  }
 }
 
-.service-icon {
-  // background-color: antiquewhite;
-  padding-right: 1rem;
-  width: 200px;
-  height: 200px;
-  transform: rotateZ(0.1deg);
-}
-
-// // .step-description
 .description {
   font-size: 1.8rem;
   line-height: 1.8;
 }
+// .step-number
+// .number {
+//   font-size: 9.8rem;
+//   font-weight: 600;
+//   color: var(--color-primary);
+//   margin-bottom: 1.2rem;
+// }
+
+// .service-icon {
+//   // background-color: antiquewhite;
+//   padding-right: 1rem;
+//   width: 200px;
+//   height: 200px;
+//   transform: rotateZ(0.1deg);
+// }
+
+// // .step-description
 
 .service-img-box {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .service-img {
-  width: 80%;
-  height: min(57vh, 600px);
+  width: auto;
+  height: min(65vh, 600px);
   transform: rotateZ(-4.3deg);
-  object-fit: cover;
+}
+
+@media (max-width: 84em) {
+  .service-img {
+    height: min(64vh, 600px);
+    transform: rotateZ(-4.3deg);
+  }
+}
+
+@media (max-width: 75em) {
+  .service-img-box {
+    padding: 1.8rem;
+  }
+  .service-img {
+    height: min(63vh, 600px);
+    transform: rotateZ(-4.3deg);
+  }
+}
+
+@media (max-width: 59em) {
+  .service-img {
+    height: min(60vh, 600px);
+  }
+
+  .description {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .service-img-box {
+    overflow: hidden;
+  }
+
+  .service-img {
+    height: min(65vh, 600px);
+  }
 }
 
 @media (max-width: 34em) {
+  .section-service {
+    padding: 15rem 0;
+  }
+
+  .service-text-box {
+    margin: 2.5rem 0;
+
+    h3 {
+      margin: 1rem 0 0.5rem 0;
+    }
+  }
   // .step-text-box {
   //   display: flex;
   //   flex-direction: column;
@@ -47,10 +107,10 @@
   //   align-items: start;
   // }
 
-  .service-icon {
-    width: 190px;
-    height: 190px;
-  }
+  // .service-icon {
+  //   width: 190px;
+  //   height: 190px;
+  // }
 
   .service-img-box:nth-child(2) {
     grid-row: 1;
@@ -60,7 +120,7 @@
   }
 
   .service-img {
-    width: 75%;
+    width: auto;
   }
 }
 

@@ -7,10 +7,10 @@ import './services.scss';
 const ServiceItem = props => {
   return (
     <Fragment>
-      <div key={props.service} id={props.id} className="step-text-box">
-        <svg className="service-icon">
+      <div key={props.service} id={props.id} className="service-text-box">
+        {/* <svg className="service-icon">
           {props.icon}
-        </svg>
+        </svg> */}
         <h3 className="heading-tertiary">{props.title}</h3>
         <p className="description">{props.description}</p>
       </div>

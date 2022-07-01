@@ -1,14 +1,15 @@
 import ServiceItem from './ServiceItem';
 import './services.scss';
 import WeddingImg from '../../assets/wedding-section.png';
-import {
-  ReactComponent as IconSvg,
-} from '../../assets/icons/Wedding-Expanded-Live-Stroke-Individual_Bride-Groom-Celebrate.svg';
+import FamilyImg from '../../assets/FamilySection.png';
+// import {
+//   ReactComponent as IconSvg,
+// } from '../../assets/icons/Wedding-Expanded-Live-Stroke-Individual_Bride-Groom-Celebrate.svg';
 
 const WEDDING_PHOTOGRAPHY = [
   {
     id: 1,
-    icon: <IconSvg height={295} width={245} />,
+    // icon: <IconSvg height={295} width={245} />,
     title: 'Wedding photograhy',
     description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
   },
@@ -17,7 +18,7 @@ const WEDDING_PHOTOGRAPHY = [
 const FAMILY_PHOTOGRAPHY = [
   {
     id: 2,
-    icon: <IconSvg height={295} width={245} />,
+    // icon: <IconSvg height={295} width={245} />,
     title: 'Family photograhy',
     description: `I've always loved the process of capturing, experiencing, and editing weddings. A milestone for two individuals, gathering families and friends from across the world is always a privilege. The fast-paced nature of the occasion may make the day feel like a blink., which is why gathering those small interactions is what I aim to document.`,
   },
@@ -53,7 +54,7 @@ const AvailableServices = () => {
         </h2>
       </div>
 
-      <div className="grid-container grid grid--2-cols ">
+      <div className="container grid grid--2-cols ">
         <div key={WEDDING_PHOTOGRAPHY}>
 
           {serviceList}
@@ -62,7 +63,7 @@ const AvailableServices = () => {
           <img className="service-img" src={WeddingImg} alt="" />
         </div>
         <div className="service-img-box">
-          <img className="service-img" src={WeddingImg} alt="" />
+          <img className="service-img" src={FamilyImg} alt="" />
         </div>
         <div key={FAMILY_PHOTOGRAPHY}>
           {serviceListTwo}

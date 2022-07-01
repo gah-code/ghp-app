@@ -1,3 +1,5 @@
+/// TODO: Make component wrappers for container, grid and flexbox for reuse
+
 .container {
   /* 1140px */
   max-width: 120rem;
@@ -5,11 +7,11 @@
   padding: 0 3.2rem;
 }
 
-.grid-container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
+// .grid-container {
+//   max-width: 120rem;
+//   margin: 0 auto;
+//   padding: 0 3.2rem;
+// }
 
 .grid {
   display: grid;
@@ -29,27 +31,27 @@
 }
 
 @media (max-width: 84em) {
-  .grid-container {
+  .container {
     column-gap: 5rem;
     row-gap: 7rem;
   }
 }
 
 @media (max-width: 75em) {
-  .grid-container {
+  .container {
     column-gap: 4.5rem;
     row-gap: 6.9rem;
   }
 }
 
 @media (max-width: 59em) {
-  .grid-container {
+  .container {
     row-gap: 6.8rem;
   }
 }
 
 @media (max-width: 34em) {
-  .grid-container {
+  .container {
     row-gap: 6.5rem;
   }
   .grid--2-cols,

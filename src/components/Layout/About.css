@@ -1,0 +1,33 @@
+.about-section {
+  padding: 12.5rem 0;
+  place-content: center;
+  background-color: var(--color-background-two);
+}
+
+.profile {
+  display: grid;
+  /* gap: 1rem; */
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'image name'
+    'image description';
+  max-width: 80ch;
+}
+
+.profile__image {
+  border-radius: 56% 44% 73% 27% / 45% 68% 32% 55%;
+  grid-area: image;
+  max-width: 95%;
+}
+
+.profile__name {
+  grid-area: name;
+  justify-self: start;
+  align-self: end;
+  margin: 0 0 1rem 1rem;
+}
+
+.profile__description {
+  margin: 1rem 0 0 1rem;
+  grid-area: description;
+}
