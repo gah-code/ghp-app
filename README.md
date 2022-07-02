@@ -1,28 +1,48 @@
 # Project Plan: ghp-app
 
-- **1** Introduction
+**1** Introduction
+
 - **1.1** Purpose of the requirements document
->
-      - Intergrate with service
-      - Provide a modern tech-savvy way to connect customers to a photography service intuitively.
-      - End point where customers could create acccont providing the ability to
-            - Pay for services and packages
-            - Book a service
-            - Access resources on current, past, and future bookings
->
-- **1.2** Scope of Project
->
-      - Modules: Facilitate communication between customers and photographer
-      - Modules: Preformatted reply forms are used in every stage
-      - Modules: Configurable via the application’s service options.
-      - Modules: The system also contains a database containing a list of services, availability, packages, and locations
-      - User Stories:
-            - As a newlywed, I want to know the photography service details so that I have an idea of what opitions meet my needs.
-            - As a mother, I want a estimate total so I can schedule my next family photo portaits.  
+
+- Intergrate with service
+- Provide a modern tech-savvy way to connect customers to a photography service intuitively.
+
+\## End point where customers could create acccont providing the ability to
+
+- [ ] Pay for services and packages
+- [ ] Book a service
+- [ ] Access resources
+
+**1.2** Scope of Project
+
+- Modules: Facilitate communication between customers and photographer
+- Modules: Preformatted reply forms are used in every stage
+- Modules: Configurable via the application’s service options.
+- Modules: The system also contains a database containing a list of services, availability, packages, and locations
+
+![App Screenshot](./src/assets/Screenshots/RE-User-System.jpg)
+
+## User Requirements
+
+- Epic 📌  
+
+      As a <User X>, I want <Functionality Y> so that I <Achieve goal Z>
+
+- As a user, I want to know the package total so I know how much it's going to cost me.
+- As a user, I want to be able to book service so that I can reserve desired date.
+- As a user, I want the ability to pay so that I can purchase selected package using the app.
+
+## System Requirments
+
+## Functional & Non-Functional Requirements
+
+## Use Cases & Scenarios
 
 [Scope-of-project](https://medium.com/@ayush_90732/how-to-define-the-project-scope-the-foolproof-way-782b239db2bc)
 
 [User-Stories](https://medium.com/agileinsider/an-introduction-to-user-stories-for-product-managers-c4c4aef38950)
+
+![App Screenshot](./src/assets/Screenshots/RE-Discovery.jpg)
 
 ---
 title: Project Structure Starter **6/22/22**
@@ -35,13 +55,18 @@ title: Project Structure Starter **6/22/22**
       ├── /src
       │   ├── /assets
       │   │  ├── /icons
+      │   │  ├── /screenshot
       │   ├── /components
       │   │  ├── /Layout
       │   │  │     ├── About.js
+      │   │  │     ├── Footer.js
       │   │  │     ├── Header.js
       │   │  ├── /Misc
       │   │  │     ├── AvailableServices.js
-      │   │  ├── Navigation
+      │   │  │     ├── ServiceItem.js
+      │   │  │     ├── Services.js
+      │   │  ├── /Navigation
+      │   │  │     ├── NavBar.js
       │   ├── images
       │   ├── styles
       │   │  ├── abstracts

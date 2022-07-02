@@ -1,0 +1,17 @@
+footer {
+  margin: 10.5rem 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-background-two);
+  height: 10rem;
+
+  .logo h4 {
+    font-family: 'Lumiera Handwriting';
+    color: var(--color-primary);
+    transform: rotateZ(1deg);
+    // text-transform: lowercase;
+    letter-spacing: 1.9px;
+    font-size: 3.5em;
+  }
+}
