@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import '../../assets/fonts/Lumiera.woff';
+
+@font-face {
+  font-family: 'Lumiera';
+  src: url('../../assets/fonts/Lumiera.woff');
+}
 
 // font-family: "Warm Memories Regular";
 // font-family: "Lumiera Handwriting";
