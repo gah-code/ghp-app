@@ -5,7 +5,7 @@ const HeroBox = () => {
     <div className="hero-text-box">
       <h1 className="heading-primary">
         {' '}
-        A laugh today a memory tomorrow
+        A laugh today a <strong>memory</strong> tomorrow
       </h1>
       <p className="description">
         Capturing; stories, experiences and life through calculated clicks
