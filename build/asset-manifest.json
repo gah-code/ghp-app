@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8f4d1235.css",
+    "main.js": "/static/js/main.d298e344.js",
+    "static/media/FamilySection.png": "/static/media/FamilySection.71479a47389e545263e0.png",
+    "static/media/wedding-section.png": "/static/media/wedding-section.b37942c9c43ec076c5f1.png",
+    "static/media/hero-img.jpg": "/static/media/hero-img.c7dad1a0124f5aa56cf5.jpg",
+    "static/media/profile.jpg": "/static/media/profile.d5808fc5c5b6471d690c.jpg",
+    "index.html": "/index.html",
+    "main.8f4d1235.css.map": "/static/css/main.8f4d1235.css.map",
+    "main.d298e344.js.map": "/static/js/main.d298e344.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f4d1235.css",
+    "static/js/main.d298e344.js"
+  ]
+}
