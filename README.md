@@ -5,7 +5,7 @@
 > - Footer
 > - Responsive for smaller screens and Desktop
 > - Buttons component
-> - Varables
+> - Variables
 >
 > *Everything* is going according to **plan**.
 

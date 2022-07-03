@@ -4,9 +4,9 @@ import ProfileImg from '../../assets/profile.jpg';
 const About = () => {
   return (
     <div>
-      <div class="container">
-        <span class="subheading">About</span>
-        <h2 class="heading-secondary">
+      <div className="container">
+        <span className="subheading">About</span>
+        <h2 className="heading-secondary">
           Behind the lens
         </h2>
       </div>
