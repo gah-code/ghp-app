@@ -1,5 +1,3 @@
-// TODO: Blob About me section
-
 import './About.scss';
 import ProfileImg from '../../assets/profile.jpg';
 

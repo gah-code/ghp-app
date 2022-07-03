@@ -47,6 +47,7 @@ const AvailableServices = () => {
 
   return (
     <section className="section-service">
+
       <div class="container">
         <span class="subheading">Photography services</span>
         <h2 class="heading-secondary">
@@ -63,6 +64,7 @@ const AvailableServices = () => {
           <img className="service-img" src={WeddingImg} alt="" />
         </div>
         <div className="service-img-box">
+          <h2 className="heading-secondary"> Summer Sessions</h2>
           <img className="service-img" src={FamilyImg} alt="" />
         </div>
         <div key={FAMILY_PHOTOGRAPHY}>

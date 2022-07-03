@@ -1,4 +1,15 @@
-# Project Plan: ghp-app
+# TODO
+
+> ## JULY
+>
+> - Footer
+> - Responsive for smaller screens and Desktop
+> - Buttons component
+> - Varables
+>
+> *Everything* is going according to **plan**.
+
+## Project Plan: ghp-app
 
 **1** Introduction
 

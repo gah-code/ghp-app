@@ -1,7 +1,7 @@
 .about-section {
   padding: 12.5rem 0;
   place-content: center;
-  // background-color: var(--color-background-two);
+  background-color: var(--color-background-two);
 }
 
 .profile {
@@ -11,7 +11,7 @@
   grid-template-areas:
     'image name'
     'image description';
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -28,23 +28,22 @@
   justify-self: start;
   align-self: end;
   margin: 0 0 0 1.1rem;
-
-  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   color: var(--color-primary-dark);
-  letter-spacing: -0.5px;
   font-size: 2.8rem;
   line-height: 1.05;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .profile__description {
-  font-family: sans-serif, Menlo;
   margin: 1rem 0 0 1.3rem;
   grid-area: description;
   font-size: 1.6rem;
   line-height: 1.8;
   font-weight: 400;
+  max-width: 100%;
 }
 
 @media (max-width: 75em) {
@@ -69,7 +68,6 @@
       'image'
       'name'
       'description';
-    max-width: 85%;
   }
 
   .profile__image {
@@ -81,13 +79,27 @@
     grid-area: name;
     justify-self: center;
     align-self: center;
-    margin: 1rem 0;
+    margin-top: 2rem;
     font-size: 2.5rem;
   }
 
   .profile__description {
     justify-self: center;
     align-self: center;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 34em) {
+  .profile {
+    max-width: 95%;
+  }
+
+  .profile__image {
+    margin-bottom: 5rem;
+  }
+
+  .profile__name {
+    margin: 0;
   }
 }
