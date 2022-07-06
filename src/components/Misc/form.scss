@@ -1,0 +1,69 @@
+.section-form {
+  padding: 12rem 0;
+  background-color: var(--color-secondary-light);
+}
+
+.form {
+  width: 100%;
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+
+  .cta {
+    background-color: rgb(240, 191, 191);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: -2rem;
+    text-align: center;
+  }
+}
+
+.book__form {
+  width: 100%;
+}
+
+.form__input {
+  font-size: 1.6rem;
+  padding: 1.2rem 6rem;
+
+  // background-color: rgba($color-white, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  transition: all 0.3s;
+  border-radius: 5px;
+  display: block;
+}
+
+.form__label {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+  display: block;
+}
+
+.form__book-btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3.5rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    // background-color: rgba($color-secondary, 10);
+    color: rgb(241, 239, 239);
+    transition: all 0.3s;
+  }
+}

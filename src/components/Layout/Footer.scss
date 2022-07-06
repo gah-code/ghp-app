@@ -61,6 +61,14 @@
 }
 
 @media (max-width: 44em) {
+  .footer__logo-box {
+    h4 {
+      margin-top: 2rem;
+      margin-bottom: -2rem;
+      letter-spacing: 1.9px;
+      font-size: 2.2em;
+    }
+  }
   .footer__navigation {
     width: 100%;
     text-align: center;

@@ -27,7 +27,7 @@ header {
 }
 
 .description p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 0.5rem;
   padding: 0.2rem 0;
 }
@@ -69,14 +69,14 @@ header {
 @media (max-width: 44em) {
   .section-hero {
     background-color: var(--color-background-two);
-    padding: 5rem 0 12rem 0;
+    padding: 8rem 0 18rem 0;
   }
 
   header {
     grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.3rem;
   }
 
   .hero-text-box {
@@ -85,8 +85,8 @@ header {
   }
 
   .description {
-    padding: 0.5rem 0;
-    font-size: 1.4rem;
+    padding: 5rem 0;
+    font-size: 1.6rem;
   }
 
   .hero-img {
