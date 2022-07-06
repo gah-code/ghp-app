@@ -1,115 +1,135 @@
 .section-form {
-  padding: 12rem 0;
-  background-color: var(--color-background-two);
-}
-
-.form {
-  width: 100%;
-
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  background-color: var(--color-primary);
+  justify-content: center;
   align-items: center;
-  padding: 3rem 5rem;
-
-  .cta {
-    background-color: rgb(240, 191, 191);
-  }
+  padding: 8rem 0;
 
   h2 {
-    text-align: center;
+    padding-top: 2rem;
+    color: var(--color-primary-dark);
   }
 
   h3 {
-    // margin-top: -2rem;
-    text-align: center;
+    color: var(--color-primary-dark);
   }
 }
 
-.book__form {
-  margin: 0 auto;
-  width: 65%;
+.form-container {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 1.8rem;
 }
 
-.form__input {
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  --field-padding: 1.6rem;
+}
+
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: 3px;
+  width: 350px;
+  outline: none;
   font-size: 1.6rem;
-  padding: 2rem 3rem;
+}
 
-  background-color: rgba(#fff, 0.5);
-  border: 2px solid var(--input-border);
-  border-radius: 4px;
-  transition: 180ms box-shadow ease-in-out;
-  border-bottom: 3px solid transparent;
+.custom-field .placeholder {
+  position: absolute;
+  left: 12px;
+  width: calc(100% - (12px * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: rgb(61, 61, 61);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+.custom-field input.dirty + .placeholder,
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.custom-field .error-message {
   width: 100%;
-  transition: all 0.3s;
-  border-radius: 5px;
-  display: block;
-}
-
-.form__input:focus {
-  border-color: hsl(var(--color-primary-dark));
-  box-shadow: 0 0 0 3px
-    hsla(
-      var(--input-focus-h),
-      var(--input-focus-s),
-      calc(var(--input-focus-l) + 40%),
-      0.8
-    );
-  outline: 3px solid transparent;
-}
-
-.form__input:hover {
-  padding: 2rem;
-  border: solid 2px var(--color-primary-dark);
-}
-
-.form__label {
-  padding: 1.2rem 0;
-  font-size: 2rem;
-  margin-top: 1.5rem;
-  display: block;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.form__book-btn,
-.form__book-btn:link,
-.form__book-btn:visited {
-  margin-top: 3rem;
-  font-size: 2rem;
-  padding: 1.6rem 4.2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 1.6rem;
+  background: #d30909;
   color: #fff;
-  letter-spacing: 1.2px;
-
-  transition: all 0.3s;
+  height: 24px;
 }
 
-.form__book-btn:hover {
-  background-color: var(--color-primary);
-  box-shadow: inset 0 0 0 3px #fff;
+.custom-field .error-message:empty {
+  opacity: 0;
+}
+/* ONE */
+.custom-field.one input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
 }
 
-@media (max-width: 34em) {
-  .section-form {
-    padding: 15rem 0;
-  }
-
-  .form {
-    padding: 2rem 1rem;
-  }
-
-  .book__form {
-    width: 90%;
-  }
-
-  .form__input {
-    padding: 2rem;
-  }
-
-  .form__book-btn {
-    margin-top: 5rem;
-  }
+.custom-field.one input + .placeholder {
+  left: 8px;
+  padding: 0 5px;
 }
+
+.custom-field.one input.dirty,
+.custom-field.one input:not(:placeholder-shown),
+.custom-field.one input:focus {
+  border-color: var(--color-primary-dark);
+  transition-delay: 0.1s;
+}
+
+.custom-field.one input.dirty + .placeholder,
+.custom-field.one input:not(:placeholder-shown) + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top: 0;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  background: var(--color-background-two);
+  width: auto;
+}
+
+.custom-field.two input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: linear-gradient(90deg, rgb(114, 151, 243), rgb(66, 85, 113))
+      center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.custom-field.two input.dirty,
+.custom-field.two input:not(:placeholder-shown),
+.custom-field.two input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+// https://codepen.io/beforesemicolon/pen/VwaWagB
+// https://codepen.io/beforesemicolon
