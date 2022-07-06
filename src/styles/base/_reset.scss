@@ -31,3 +31,14 @@ button.button {
   border-radius: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}

@@ -4,12 +4,12 @@ import ProfileImg from '../../assets/profile.jpg';
 const About = () => {
   return (
     <div>
-      <div className="container">
+      {/* <div className="container">
         <span className="subheading">About</span>
         <h2 className="heading-secondary">
           Behind the lens
         </h2>
-      </div>
+      </div> */}
       <section className="about-section grid">
         <div className="container ">
           <div className="profile">

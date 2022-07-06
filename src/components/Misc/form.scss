@@ -1,15 +1,13 @@
 .section-form {
   padding: 12rem 0;
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-background-two);
 }
 
 .form {
   width: 100%;
-  padding: 2rem 3rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-content: center;
+
   align-items: center;
+  padding: 3rem 5rem;
 
   .cta {
     background-color: rgb(240, 191, 191);
@@ -20,21 +18,24 @@
   }
 
   h3 {
-    margin-top: -2rem;
+    // margin-top: -2rem;
     text-align: center;
   }
 }
 
 .book__form {
-  width: 100%;
+  margin: 0 auto;
+  width: 65%;
 }
 
 .form__input {
   font-size: 1.6rem;
-  padding: 1.2rem 6rem;
+  padding: 2rem 3rem;
 
-  // background-color: rgba($color-white, 0.5);
-  border: none;
+  background-color: rgba(#fff, 0.5);
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  transition: 180ms box-shadow ease-in-out;
   border-bottom: 3px solid transparent;
   width: 100%;
   transition: all 0.3s;
@@ -42,28 +43,73 @@
   display: block;
 }
 
-.form__label {
-  padding: 1rem 0;
-  font-size: 1.6rem;
-  margin-top: 0.6rem;
-  display: block;
+.form__input:focus {
+  border-color: hsl(var(--color-primary-dark));
+  box-shadow: 0 0 0 3px
+    hsla(
+      var(--input-focus-h),
+      var(--input-focus-s),
+      calc(var(--input-focus-l) + 40%),
+      0.8
+    );
+  outline: 3px solid transparent;
 }
 
-.form__book-btn {
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 3.5rem;
-    display: inline-block;
-    border-radius: 10rem;
-    position: relative;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 3rem;
-    // background-color: rgba($color-secondary, 10);
-    color: rgb(241, 239, 239);
-    transition: all 0.3s;
+.form__input:hover {
+  padding: 2rem;
+  border: solid 2px var(--color-primary-dark);
+}
+
+.form__label {
+  padding: 1.2rem 0;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  display: block;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form__book-btn,
+.form__book-btn:link,
+.form__book-btn:visited {
+  margin-top: 3rem;
+  font-size: 2rem;
+  padding: 1.6rem 4.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  letter-spacing: 1.2px;
+
+  transition: all 0.3s;
+}
+
+.form__book-btn:hover {
+  background-color: var(--color-primary);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+@media (max-width: 34em) {
+  .section-form {
+    padding: 15rem 0;
+  }
+
+  .form {
+    padding: 2rem 1rem;
+  }
+
+  .book__form {
+    width: 90%;
+  }
+
+  .form__input {
+    padding: 2rem;
+  }
+
+  .form__book-btn {
+    margin-top: 5rem;
   }
 }

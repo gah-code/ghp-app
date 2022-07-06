@@ -4,18 +4,18 @@ const Form = () => {
   return (
     <section className="section-form">
       <div className="container">
-        <div className="heading-secondary">
-          <h2 class="heading-tertiary">Booking</h2>
 
-        </div>
+        <h2 class="subheading">Booking</h2>
+        <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
+
       </div>
       <div className="form">
-        <div className="cta">
+        {/* <div className="cta">
           <h2 class="heading-tertiary">Looking</h2>
           <h3 class="section__header">forward to hearing from you</h3>
-        </div>
+        </div> */}
 
-        <div className="container">
+        <div className="container grid">
           <div className="book__form">
             <form className="form-area">
               {' '} <p class="form__group">
@@ -54,7 +54,7 @@ const Form = () => {
                   />
                 </label>
               </p>
-              <button class="form__book-btn" type="submit">Send</button>
+              <button className="form__book-btn" type="submit">Send</button>
             </form>
           </div>
         </div>
