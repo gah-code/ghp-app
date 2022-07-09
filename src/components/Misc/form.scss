@@ -6,7 +6,7 @@
   background-color: var(--color-primary);
   justify-content: center;
   align-items: center;
-  padding: 8rem 0;
+  padding: 5rem 0;
 
   h2 {
     padding-top: 2rem;
@@ -14,7 +14,7 @@
   }
 
   h3 {
-    color: var(--color-primary-dark);
+    color: var(--color-background-two);
   }
 }
 
@@ -32,7 +32,7 @@
   position: relative;
   font-size: 14px;
   border-top: 20px solid transparent;
-  margin-bottom: 5px;
+  margin-bottom: 1.1rem;
   --field-padding: 1.6rem;
 }
 
@@ -131,5 +131,101 @@
   background-size: 100% 0.15em, 100% 0.1em, 100%;
 }
 
+.form-control {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  margin: 0;
+  padding: 3rem 20.5rem 0 0;
+
+  align-items: start;
+  justify-items: start;
+
+  p {
+    margin-left: 0.2em;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+:root {
+  --form-control-color: var(--color-primary);
+  --form-control-disabled: var(--color-primary-dark);
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--color-background);
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+input[type='checkbox']:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type='checkbox']:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
 // https://codepen.io/beforesemicolon/pen/VwaWagB
 // https://codepen.io/beforesemicolon
+
+@media (max-width: 34em) {
+  .section-form {
+    padding: 4.2rem 0;
+  }
+
+  .form-container {
+    width: 90vw;
+    height: 45vh;
+  }
+
+  .custom-field {
+    margin-bottom: 0.5rem;
+  }
+}

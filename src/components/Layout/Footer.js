@@ -18,10 +18,22 @@ const Footer = () => {
               <a href="/" className="footer__link" alt="link">Resources</a>
             </li>
             <li className="footer__item">
-              <a href="/" className="footer__link" alt="link">Github</a>
+              <a
+                href="https://github.com/gah-code"
+                className="footer__link"
+                alt="link"
+              >
+                Github
+              </a>
             </li>
             <li className="footer__item">
-              <a href="/" className="footer__link" alt="link">Linkin</a>
+              <a
+                href="https://www.linkedin.com/in/gilbert-haro-2b108222b"
+                className="footer__link"
+                alt="link"
+              >
+                linkedin
+              </a>
             </li>
             <li className="footer__item">
               <a href="/" className="footer__link" alt="link">Instagram</a>
