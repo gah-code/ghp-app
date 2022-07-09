@@ -91,7 +91,7 @@
 
 @media (max-width: 34em) {
   .profile {
-    max-width: 90%;
+    max-width: 94%;
   }
 
   .profile__image {
@@ -100,5 +100,10 @@
 
   .profile__name {
     margin: 0;
+  }
+
+  .profile__description {
+    margin: 1.8rem auto;
+    font-size: 1.5rem;
   }
 }

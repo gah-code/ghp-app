@@ -217,12 +217,17 @@ input[type='checkbox']:disabled {
 
 @media (max-width: 34em) {
   .section-form {
-    padding: 4.2rem 0;
+    padding: 3rem 0;
   }
 
   .form-container {
-    width: 90vw;
+    width: 95vw;
     height: 45vh;
+    margin: 0 auto;
+  }
+
+  .form-control {
+    font-size: 1.9rem;
   }
 
   .custom-field {
