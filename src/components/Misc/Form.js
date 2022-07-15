@@ -10,33 +10,21 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form
-        class="cta-form"
-        name="Photography-contact"
-        method="POST"
-        data-netlify="true"
-        netlify
-      >
+      <form class="cta-form" name="contact" method="post" data-netlify="true">
         <div className="form-group">
           <div className="form-container">
-            <label for="full-name" class="custom-field two">
+            <label class="custom-field two">
               <input
-                id="full-name"
+                id="name"
                 type="text"
                 placeholder="&nbsp;"
                 required
-                name="fullname"
+                name="name"
               />
               <span class="placeholder">Enter Name</span>
             </label>
-            <label for="email" class="custom-field one">
-              <input
-                id="email"
-                type="email"
-                placeholder=" "
-                required
-                name="email"
-              />
+            <label class="custom-field one">
+              <input id="email" type="email" placeholder=" " name="email" />
               <span class="placeholder">Enter Email</span>
             </label>
             <label for="service-type" className="form-control">
