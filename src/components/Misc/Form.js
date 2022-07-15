@@ -25,9 +25,9 @@ const Form = () => {
         <div className="form-group">
           <div className="form-container">
 
-            <label htmlFor="full-name" class="custom-field two">
+            <label class="custom-field two">
               <input
-                id="name"
+                id="full-name"
                 type="text"
                 placeholder="&nbsp;"
                 name="full-name"
