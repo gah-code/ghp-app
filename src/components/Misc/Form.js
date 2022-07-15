@@ -15,7 +15,6 @@ const Form = () => {
         name="contact"
         netlify
         netlify-honeypot="bot-field"
-        hidden
       >
         <div className="form-group">
           <div className="form-container">
