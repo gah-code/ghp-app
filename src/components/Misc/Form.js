@@ -12,13 +12,14 @@ const Form = () => {
 
       <form
         class="cta-form"
-        name="photography-request"
-        data-netlify-recaptcha="true"
+        name="photo-request"
+        method="post"
         data-netlify="true"
       >
+        <input type="hidden" name="photo-request" value="contact" />
         <div className="form-group">
           <div className="form-container">
-            <label for="name" class="custom-field two">
+            <label htmlFor="name" class="custom-field two">
               <input
                 id="name"
                 type="text"
@@ -28,15 +29,15 @@ const Form = () => {
               />
               <span class="placeholder">Enter Name</span>
             </label>
-            <label for="email" class="custom-field one">
+            <label htmlFor="email" class="custom-field one">
               <input id="email" type="email" placeholder=" " name="email" />
               <span class="placeholder">Enter Email</span>
             </label>
-            <label for="service-type" className="form-control">
-              <input type="checkbox" Name="checkbox-checked" />
+            <label htmlFor="service-type" className="form-control">
+              <input type="checkbox" name="checkbox-checked" />
               <p> wedding</p>
 
-              <input type="checkbox" Name="checkbox-checked" />
+              <input type="checkbox" name="checkbox-checked" />
               <p> Family</p>
             </label>
           </div>
