@@ -1,5 +1,7 @@
 import './form.scss';
 
+//// TODO: Form button + Form-module-event + Form data
+
 const Form = () => {
   return (
     <section className="section-form">
@@ -8,18 +10,30 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form class="cta-form" name="contact">
+      <form class="cta-form" name="contact" netlify>
         <div className="form-group">
           <div className="form-container">
-            <label class="custom-field two">
-              <input type="url" placeholder="&nbsp;" />
+            <label for="full-name" class="custom-field two">
+              <input
+                id="full-name"
+                type="text"
+                placeholder="&nbsp;"
+                required
+                name="fullname"
+              />
               <span class="placeholder">Enter Name</span>
             </label>
-            <label class="custom-field one">
-              <input type="text" placeholder=" " />
+            <label for="email" class="custom-field one">
+              <input
+                id="email"
+                type="email"
+                placeholder=" "
+                required
+                name="email"
+              />
               <span class="placeholder">Enter Email</span>
             </label>
-            <label className="form-control">
+            <label for="service-type" className="form-control">
               <input type="checkbox" Name="checkbox-checked" />
               <p> wedding</p>
 
