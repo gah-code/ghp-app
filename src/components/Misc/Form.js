@@ -10,12 +10,7 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form
-        class="cta-form"
-        name="contact"
-        netlify
-        netlify-honeypot="bot-field"
-      >
+      <form class="cta-form" name="photography-request" netlify>
         <div className="form-group">
           <div className="form-container">
             <label class="custom-field two">
