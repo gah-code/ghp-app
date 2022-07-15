@@ -12,7 +12,7 @@ const Form = () => {
 
       <form
         class="cta-form"
-        name="contact"
+        name="Photography-contact"
         method="POST"
         data-netlify="true"
         netlify
