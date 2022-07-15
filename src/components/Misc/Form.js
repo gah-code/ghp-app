@@ -25,13 +25,13 @@ const Form = () => {
         <div className="form-group">
           <div className="form-container">
 
-            <label class="custom-field two">
+            <label htmlFor="full-name" class="custom-field two">
               <input
                 id="full-name"
                 type="text"
                 placeholder="&nbsp;"
-                name="full-name"
                 required
+                name="fullname"
               />
               <span class="placeholder">Enter Name</span>
             </label>
