@@ -20,6 +20,7 @@ const Form = () => {
         data-netlify="true"
         onSubmit="submit"
       >
+        <input type="hidden" name="form-name" value="contact" />
 
         <div className="form-group">
           <div className="form-container">
