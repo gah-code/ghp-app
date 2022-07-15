@@ -1,3 +1,4 @@
+import TestForm from './index';
 import './form.scss';
 
 //// TODO: Form button + Form-module-event + Form data
@@ -10,28 +11,31 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form
-        class="cta-form"
-        name="contact"
-        method="POST"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
-      >
-        <input type="hidden" name="contact" value="contact" />
+      <TestForm />
+
+      <form class="cta-form" name="contact" method="post">
+
         <div className="form-group">
           <div className="form-container">
+
             <label htmlFor="name" class="custom-field two">
               <input
                 id="name"
                 type="text"
                 placeholder="&nbsp;"
-                required
                 name="name"
+                required
               />
               <span class="placeholder">Enter Name</span>
             </label>
             <label htmlFor="email" class="custom-field one">
-              <input id="email" type="email" placeholder=" " name="email" />
+              <input
+                id="email"
+                type="email"
+                placeholder=" "
+                name="email"
+                required
+              />
               <span class="placeholder">Enter Email</span>
             </label>
             <label htmlFor="service-type" className="form-control">
@@ -43,7 +47,7 @@ const Form = () => {
             </label>
           </div>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" value="Submit message">Send</button>
       </form>
 
     </section>
