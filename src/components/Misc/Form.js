@@ -10,7 +10,7 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form class="cta-form" name="conact" method="post" data-netlify="true">
+      <form class="cta-form" name="contact" method="post" data-netlify="true">
         <input type="hidden" name="contact" value="contact" />
         <div className="form-group">
           <div className="form-container">
