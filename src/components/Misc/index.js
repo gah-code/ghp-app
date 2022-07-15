@@ -4,13 +4,8 @@ export default function TestForm () {
   return (
     <div>
 
-      <form
-        name="contact v1"
-        method="POST"
-        data-netlify="true"
-        onSubmit="submit"
-      >
-        <input type="hidden" name="form-name" value="contact v1" />
+      <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <input type="hidden" name="form-name" value="contact" />
 
         <div>
           <label htmlFor="first-name">
