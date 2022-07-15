@@ -10,7 +10,13 @@ const Form = () => {
         <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
       </div>
 
-      <form class="cta-form" name="contact" netlify>
+      <form
+        class="cta-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify
+      >
         <div className="form-group">
           <div className="form-container">
             <label for="full-name" class="custom-field two">
@@ -42,7 +48,7 @@ const Form = () => {
             </label>
           </div>
         </div>
-        <button>.</button>
+        <button type="submit">Send</button>
       </form>
 
     </section>
