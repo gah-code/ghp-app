@@ -6,7 +6,7 @@
   background-color: var(--color-primary);
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding: 8rem 0 9rem 0;
 
   h2 {
     padding-top: 2rem;
@@ -26,6 +26,30 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.form-button {
+  display: inline-block;
+  background-color: var(--color-background);
+  font-size: 1.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+}
+button.form-button {
+  display: grid;
+  margin: 5rem 0 0 0;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
 }
 
 .custom-field {
@@ -36,6 +60,15 @@
   --field-padding: 1.6rem;
 }
 
+label.custom-field.one {
+  transition: all 0.3s ease-in-out;
+}
+
+label.custom-field.one:hover {
+  // box-shadow: 2rem 1rem #555;
+  transform: scale(1.1);
+}
+
 .custom-field input {
   border: none;
   -webkit-appearance: none;
@@ -43,7 +76,7 @@
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  padding: 1.6rem;
+  padding: 1.9rem;
   border-radius: 3px;
   width: 350px;
   outline: none;
@@ -60,15 +93,16 @@
   top: 22px;
   line-height: 100%;
   transform: translateY(-50%);
-  color: rgb(61, 61, 61);
+
+  color: var(--color-background-two);
   transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 .custom-field input.dirty + .placeholder,
 .custom-field input:focus + .placeholder,
 .custom-field input:not(:placeholder-shown) + .placeholder {
   top: -10px;
-  font-size: 1.6rem;
-  color: #777;
+  font-size: 1.8rem;
+  color: var(--color-primary);
 }
 
 .custom-field .error-message {
@@ -76,7 +110,7 @@
   display: flex;
   align-items: center;
   padding: 0 8px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   background: #d30909;
   color: #fff;
   height: 24px;
@@ -88,8 +122,9 @@
 /* ONE */
 .custom-field.one input {
   background: none;
-  border: 2px solid #ddd;
+  border: 2.5px solid var(--color-black);
   transition: border-color 0.3s ease;
+  padding: 2.2rem;
 }
 
 .custom-field.one input + .placeholder {
@@ -109,7 +144,7 @@
 .custom-field.one input:focus + .placeholder {
   top: 0;
   font-size: 1.6rem;
-  color: var(--color-primary);
+  color: var(--color-black);
   background: var(--color-background-two);
   width: auto;
 }
@@ -139,29 +174,30 @@
   grid-template-columns: 1em auto;
   gap: 0.5em;
   margin: 0;
-  padding: 3rem 20.5rem 0 0;
+  padding: 4rem 20.5rem 0 0;
 
   align-items: start;
   justify-items: start;
 
   p {
-    margin-left: 0.2em;
+    letter-spacing: 1.1px;
+    margin-left: 1.3rem;
     padding-bottom: 1rem;
     text-transform: uppercase;
   }
 }
 
 :root {
-  --form-control-color: var(--color-primary);
-  --form-control-disabled: var(--color-primary-dark);
+  --form-control-color: var(--color-secondary);
+  --form-control-disabled: var(--color-background);
 }
 
 .form-control + .form-control {
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 .form-control--disabled {
-  color: var(--form-control-disabled);
+  color: var(--color-background-two);
   cursor: not-allowed;
 }
 
@@ -185,8 +221,8 @@ input[type='checkbox'] {
 
 input[type='checkbox']::before {
   content: '';
-  width: 0.65em;
-  height: 0.65em;
+  width: 0.78em;
+  height: 0.8em;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   transform: scale(0);
   transform-origin: bottom left;
@@ -197,7 +233,7 @@ input[type='checkbox']::before {
 }
 
 input[type='checkbox']:checked::before {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 input[type='checkbox']:focus {
@@ -207,7 +243,6 @@ input[type='checkbox']:focus {
 
 input[type='checkbox']:disabled {
   --form-control-color: var(--form-control-disabled);
-
   color: var(--form-control-disabled);
   cursor: not-allowed;
 }
@@ -217,7 +252,7 @@ input[type='checkbox']:disabled {
 
 @media (max-width: 34em) {
   .section-form {
-    padding: 3rem 0;
+    padding: 9rem 0 12rem 0;
   }
 
   .form-container {

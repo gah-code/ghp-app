@@ -1,7 +1,8 @@
 // import TestForm from './index';
 import './form.scss';
 
-//// TODO: Form button + Form-module-event + Form data
+//// NOTE: Finshied Form Btn
+//// TODO: Form-module-event + Form data
 
 const Form = () => {
   return (
@@ -25,7 +26,7 @@ const Form = () => {
         <div className="form-group">
           <div className="form-container">
 
-            <label htmlFor="full-name" class="custom-field two">
+            <label htmlFor="full-name" class="custom-field one">
               <input
                 id="full-name"
                 type="text"
@@ -46,15 +47,24 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
             <label htmlFor="service-type" className="form-control">
-              <input type="checkbox" name="checkbox-checked" />
+              <input type="checkbox" name="checkbox-checked" value="Wedding" />
               <p> wedding</p>
 
               <input type="checkbox" name="checkbox-checked" />
               <p> Family</p>
+
+              <button
+                className="form-button"
+                type="submit"
+                value="Submit message"
+              >
+                Send
+              </button>
             </label>
+
           </div>
         </div>
-        <button type="submit" value="Submit message">Send</button>
+
       </form>
 
     </section>
