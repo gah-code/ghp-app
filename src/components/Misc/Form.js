@@ -2,7 +2,7 @@
 import './form.scss';
 
 //// NOTE: Finshied Form Btn
-//// TODO: Form-module-event + Form data
+//// TODO: Form Radio Btn Function > Form-module-event > Form data
 
 const Form = () => {
   return (
@@ -47,10 +47,10 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
             <label htmlFor="service-type" className="form-control">
-              <input type="checkbox" name="checkbox-checked" value="Wedding" />
+              <input type="radio" name="checkbox-checked" value="Wedding" />
               <p> wedding</p>
 
-              <input type="checkbox" name="checkbox-checked" />
+              <input type="radio" name="checkbox-checked" value="Family" />
               <p> Family</p>
 
               <button
