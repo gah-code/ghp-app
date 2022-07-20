@@ -48,7 +48,7 @@ const Form = () => {
             </label>
 
             <label htmlFor="service-type" className="form-control">
-              <input type="radio" name="checkbox-checked" value="Wedding" />
+              <input type="radio" name="service-type" value="Wedding" />
               <p> wedding</p>
 
               {/* <input type="radio" name="checkbox-checked" value="Family" />
