@@ -47,14 +47,22 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
-            <label htmlFor="service-type" className="form-control">
-              <input type="radio" name="service-type" value="Wedding" />
-              <p> wedding</p>
+            <div class="radio-toolbar">
+              <input
+                type="radio"
+                id="radio1"
+                name="radios"
+                value="all"
+                checked
+              />
+              <label for="radio1">All</label>
 
-              {/* <input type="radio" name="checkbox-checked" value="Family" />
-              <p> Family</p> */}
+              <input type="radio" id="radio2" name="radios" value="false" />
+              <label for="radio2">Open</label>
 
-            </label>
+              <input type="radio" id="radio3" name="radios" value="true" />
+              <label for="radio3">Archived</label>
+            </div>
 
             <button
               className="form-button"
