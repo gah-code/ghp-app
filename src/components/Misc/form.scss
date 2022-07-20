@@ -149,23 +149,6 @@ label.custom-field.one:hover {
   width: auto;
 }
 
-.custom-field.two input {
-  border-radius: 0;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background: linear-gradient(90deg, rgb(114, 151, 243), rgb(66, 85, 113))
-      center bottom/0 0.15em no-repeat,
-    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
-  transition: background-size 0.3s ease;
-}
-
-.custom-field.two input.dirty,
-.custom-field.two input:not(:placeholder-shown),
-.custom-field.two input:focus {
-  background-size: 100% 0.15em, 100% 0.1em, 100%;
-}
-
 .form-control {
   font-size: 2rem;
   font-weight: bold;
@@ -199,6 +182,29 @@ label.custom-field.one:hover {
 .form-control--disabled {
   color: var(--color-background-two);
   cursor: not-allowed;
+}
+
+// https://codepen.io/beforesemicolon/pen/VwaWagB
+// https://codepen.io/beforesemicolon
+
+@media (max-width: 34em) {
+  .section-form {
+    padding: 9rem 0 15rem 0;
+  }
+
+  .form-container {
+    width: 95vw;
+    height: 45vh;
+    margin: 0 auto;
+  }
+
+  .form-control {
+    font-size: 1.9rem;
+  }
+
+  .custom-field {
+    margin-bottom: 0.5rem;
+  }
 }
 
 input[type='radio'] {
@@ -247,25 +253,8 @@ input[type='radio']:disabled {
   cursor: not-allowed;
 }
 
-// https://codepen.io/beforesemicolon/pen/VwaWagB
-// https://codepen.io/beforesemicolon
+//  {/* <input type="radio" name="checkbox-checked" value="Wedding" />
+//           <p> wedding</p>
 
-@media (max-width: 34em) {
-  .section-form {
-    padding: 9rem 0 15rem 0;
-  }
-
-  .form-container {
-    width: 95vw;
-    height: 45vh;
-    margin: 0 auto;
-  }
-
-  .form-control {
-    font-size: 1.9rem;
-  }
-
-  .custom-field {
-    margin-bottom: 0.5rem;
-  }
-}
+//           <input type="radio" name="checkbox-checked" value="Family" />
+//           <p> Family</p> */}

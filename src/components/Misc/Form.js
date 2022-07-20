@@ -46,21 +46,23 @@ const Form = () => {
               />
               <span class="placeholder">Enter Email</span>
             </label>
+
             <label htmlFor="service-type" className="form-control">
               <input type="radio" name="checkbox-checked" value="Wedding" />
               <p> wedding</p>
 
-              <input type="radio" name="checkbox-checked" value="Family" />
-              <p> Family</p>
+              {/* <input type="radio" name="checkbox-checked" value="Family" />
+              <p> Family</p> */}
 
-              <button
-                className="form-button"
-                type="submit"
-                value="Submit message"
-              >
-                Send
-              </button>
             </label>
+
+            <button
+              className="form-button"
+              type="submit"
+              value="Submit message"
+            >
+              Send
+            </button>
 
           </div>
         </div>
