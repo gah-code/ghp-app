@@ -1,5 +1,17 @@
 .section-service {
   padding: 12.6rem 0;
+  background-image: linear-gradient(
+      180deg,
+      rgba(#fdfbfb, 0.899) 78%,
+      rgba(#f7f7f7, 0.999) 100%,
+      transparent 15%
+    ),
+    url(../../assets/backgrounds/background-one.jpg);
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
 }
 .service-text-box {
   position: relative;

@@ -1,6 +1,19 @@
 .about-section {
   padding: 12.5rem 0;
   place-content: center;
+
+  background-image: linear-gradient(
+      180deg,
+      rgba(#edf0e2, 0.877) 80%,
+      rgba(#edf0e2, 0.7888) 100%,
+      transparent 90%
+    ),
+    url(../../assets/backgrounds/background-two.jpg);
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
 }
 
 .profile {

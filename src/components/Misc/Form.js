@@ -46,34 +46,32 @@ const Form = () => {
               />
               <span class="placeholder">Enter Email</span>
             </label>
-
-            <label>
-              <input type="radio" name="attendance" value="Attending" /> Yes
+            <label htmlFor="service" class="custom-field one">
+              <input
+                id="service"
+                type="text"
+                placeholder=" "
+                name="service"
+                // required
+              />
+              <span class="placeholder">Enter Service</span>
             </label>
 
-            <p class="form__group">
-              <select class="form__input" name="service[]" id="service-type">
-                <option value="Wedding" selected>Wedding</option>
-                <option value="Family">Family</option>
-                <option value="Engagement">Engagement</option>
-                <option value="other">Other</option>
-              </select>
-            </p>
+            <button
+              className="form-button"
+              type="submit"
+              value="Submit message"
+            >
+              Send
+            </button>
 
             <label htmlFor="service" className="form-control">
-              <input type="checkbox" id="service" value="Wedding" />
-              <p> wedding</p>
+              {/* <input type="checkbox" id="service" value="Wedding" />
+              <p> wedding</p> */}
 
               {/* <input type="radio" id="service" name="service" value="Family" />
               <p> Family</p> */}
 
-              <button
-                className="form-button"
-                type="submit"
-                value="Submit message"
-              >
-                Send
-              </button>
             </label>
 
           </div>
