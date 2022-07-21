@@ -47,23 +47,21 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
-            <div>
-              <h2>Interests</h2>
-              <label>
-                <input type="radio" id="js" value="JavaScript" />
+            <label htmlFor="service" className="form-control">
+              <input type="radio" id="service" name="service" value="Wedding" />
+              <p> wedding</p>
 
-                JavaScript
-              </label>
+              <input type="radio" id="service" name="service" value="Family" />
+              <p> Family</p>
 
-            </div>
-
-            <button
-              className="form-button"
-              type="submit"
-              value="Submit message"
-            >
-              Send
-            </button>
+              <button
+                className="form-button"
+                type="submit"
+                value="Submit message"
+              >
+                Send
+              </button>
+            </label>
 
           </div>
         </div>
