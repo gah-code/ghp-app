@@ -47,15 +47,13 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
-            <label class="form__label">Service Type</label>
-
-            <p class="form__group">
-              <select class="form__input" name="service[]" id="service-type">
-                <option value="Wedding" selected>Wedding</option>
-                <option value="Family">Family</option>
-                <option value="Engagement">Engagement</option>
-                <option value="other">Other</option>
-              </select>
+            <p>
+              <label>
+                Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select>
+              </label>
             </p>
 
             <button
