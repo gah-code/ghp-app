@@ -47,15 +47,16 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
-            <label htmlFor="service-type">
-              <input
-                id="service-type"
-                type="radio"
-                required
-                name="servicetype"
-              />
-              <span class="placeholder">Select Service</span>
-            </label>
+            <label class="form__label">Service Type</label>
+
+            <p class="form__group">
+              <select class="form__input" name="service[]" id="service-type">
+                <option value="Wedding" selected>Wedding</option>
+                <option value="Family">Family</option>
+                <option value="Engagement">Engagement</option>
+                <option value="other">Other</option>
+              </select>
+            </p>
 
             <button
               className="form-button"
