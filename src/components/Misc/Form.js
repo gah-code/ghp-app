@@ -47,14 +47,15 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
-            <p>
+            <div>
+              <h2>Interests</h2>
               <label>
-                Your Role: <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select>
+                <input type="radio" id="js" value="JavaScript" />
+
+                JavaScript
               </label>
-            </p>
+
+            </div>
 
             <button
               className="form-button"
