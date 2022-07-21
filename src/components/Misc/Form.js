@@ -16,12 +16,12 @@ const Form = () => {
 
       <form
         class="cta-form"
-        name="contact-v2"
+        name="contact"
         method="POST"
         data-netlify="true"
         onSubmit="submit"
       >
-        <input type="hidden" name="form-name" value="contact-v2" />
+        <input type="hidden" name="form-name" value="contact" />
 
         <div className="form-group">
           <div className="form-container">
@@ -47,8 +47,23 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
+            <p>
+              <label for="stack">Your Tech Stack:</label>
+              <select id="stack" name="stack">
+                <option value="front-end">Front-End</option>
+                <option value="back-end">Back-End</option>
+                <option value="mobile-developer">Mobile-Developer</option>
+                <option value="full-stack">Full-Stack</option>
+              </select>
+            </p>
+
             <label htmlFor="service" className="form-control">
-              <input type="radio" id="service" name="service" value="Wedding" />
+              <input
+                type="checkbox"
+                id="service"
+                name="service"
+                value="Wedding"
+              />
               <p> wedding</p>
 
               {/* <input type="radio" id="service" name="service" value="Family" />
