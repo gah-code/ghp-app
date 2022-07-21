@@ -51,6 +51,15 @@ const Form = () => {
               <input type="radio" name="attendance" value="Attending" /> Yes
             </label>
 
+            <p class="form__group">
+              <select class="form__input" name="service[]" id="service-type">
+                <option value="Wedding" selected>Wedding</option>
+                <option value="Family">Family</option>
+                <option value="Engagement">Engagement</option>
+                <option value="other">Other</option>
+              </select>
+            </p>
+
             <label htmlFor="service" className="form-control">
               <input type="checkbox" id="service" value="Wedding" />
               <p> wedding</p>
