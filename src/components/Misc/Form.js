@@ -47,6 +47,10 @@ const Form = () => {
               <span class="placeholder">Enter Email</span>
             </label>
 
+            <label>
+              <input type="radio" name="attendance" value="Attending" /> Yes
+            </label>
+
             <label htmlFor="service" className="form-control">
               <input type="checkbox" id="service" value="Wedding" />
               <p> wedding</p>
