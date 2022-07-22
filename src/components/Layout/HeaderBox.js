@@ -1,4 +1,9 @@
 import './Header.scss';
+import colorOne from '../../assets/backgrounds/color-1.jpg';
+import colorTwo from '../../assets/backgrounds/color-2.jpg';
+import colorThree from '../../assets/backgrounds/color-3.jpg';
+import colorFour from '../../assets/backgrounds/color-4.jpg';
+import colorFive from '../../assets/backgrounds/color-5.jpg';
 
 const HeroBox = () => {
   return (
@@ -15,6 +20,19 @@ const HeroBox = () => {
       {/* <Button buttonType="learn">Learn more</Button>
       <Button buttonType="booking">Booking</Button> */}
       {/* <Avatar /> */}
+
+      <div class="delivered-meals">
+        <div class="delivered-imgs">
+          <img src={colorOne} aria-hidden alt="Customer photo" />
+          <img src={colorTwo} aria-hidden alt="Customer photo" />
+          <img src={colorThree} aria-hidden alt="Customer photo" />
+          <img src={colorFour} aria-hidden alt="Customer photo" />
+          <img src={colorFive} aria-hidden alt="Customer photo" />
+        </div>
+        <p className="delivered-text">
+          <span> Let's Create</span>{' '}
+        </p>
+      </div>
     </div>
   );
 };
