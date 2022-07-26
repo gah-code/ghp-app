@@ -1,11 +1,14 @@
 // import TestForm from './index';
 import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import './form.scss';
 
-//// NOTE: Finshied Form Btn
-//// TODO: Form Radio Btn Function > Form-module-event > Form data
-
 const Form = () => {
+  const [state, handleSubmit] = useForm('mpzbvndl');
+
+  if (state.succeeded) {
+    return <p>Thanks for your submission!</p>;
+  }
   return (
     <section className='section-form'>
       <div className='container'>
@@ -13,65 +16,69 @@ const Form = () => {
         <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
-      {/* <TestForm /> */}
-
-      <div class='row'>
-        <div class='book__form'>
-          <form
-            data-netlify='true'
-            class='cta-form'
-            name='contact-form'
-            method='POST'
-            onSubmit='submit'
-            data-netlify-recaptcha='true'
-          >
-            <input type='hidden' name='form-name' value='contact-form' />
-
-            <p class='form__group'>
-              <label htmlFor='name' className='form__label'>
-                Your Name:
-                <input
-                  type='text'
-                  name='name'
-                  class='form__input'
-                  placeholder='Full name'
-                  id='name'
-                  required
-                />
-              </label>
-            </p>
-
-            <p class='form__group'>
-              <label htmlFor='date' class='form__label'>
-                Date:
-                <input id='date' type='date' name='date' class='form__input' />
-              </label>
-            </p>
-
-            <p class='form__group'>
-              <label htmlFor='service' class='form__label'>
-                Service Type
-                <select class='form__input' name='service[]' id='service-type'>
-                  <option value='Wedding' selected>
-                    Wedding
-                  </option>
-                  <option value='Family'>Family</option>
-                  <option value='Engagement'>Engagement</option>
-                  <option value='other'>Other</option>
-                </select>
-              </label>
-            </p>
-            <div data-netlify-recaptcha='true'></div>
-            <p>
-              <button value='Submit message' className='btn' type='submit'>
-                Send
-              </button>
-            </p>
-          </form>
+      <form className='form' onSubmit={handleSubmit}>
+        <p>
+          <label className='form__label' htmlFor='email'>
+            Email Address
+          </label>
+          <input className='form__input' id='email' type='email' name='email' />
+          <ValidationError prefix='Email' field='email' errors={state.errors} />
+        </p>{' '}
+        <p>
+          <label className='form__label' htmlFor='fullname'>
+            Full name
+          </label>
+          <input
+            className='form__input'
+            id='fullname'
+            type='fullname'
+            name='fullname'
+          />
+          <ValidationError
+            prefix='Fullname'
+            field='fullname'
+            errors={state.errors}
+          />
+        </p>{' '}
+        <label className='form__label' for='department'>
+          Service
+        </label>
+        <select
+          className='form__input'
+          name='department'
+          id='department'
+          required=''
+        >
+          <option value='' selected='' disabled=''>
+            Select
+          </option>
+          <option value='Front Desk'>Front Desk</option>
+          <option value='Customer Care'>Customer Care</option>
+          <option value='Shipping Receiving'>Shipping / Receiving</option>
+          <option value='Billing Accounting'>Billing / Accounting</option>
+        </select>
+        <textarea id='message' name='message' />
+        <ValidationError
+          prefix='Message'
+          field='message'
+          errors={state.errors}
+        />
+        <div>
+          <button className='btn' type='submit' disabled={state.submitting}>
+            Submit
+          </button>
+          <ValidationError errors={state.errors} />
         </div>
-      </div>
+      </form>
+
+      {/* <ContactForm /> */}
+
+      {/* <TestForm /> */}
     </section>
   );
 };
 
 export default Form;
+
+//// NOTE: Finshied Form Btn
+//// TODO: Form Radio Btn Function > Form-module-event > Form data

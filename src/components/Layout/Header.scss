@@ -155,7 +155,7 @@ p.description {
 
 @media (max-width: 34em) {
   .section-hero {
-    padding: 5rem 0.1rem 18.5rem 0.1rem;
+    padding: 5rem 0.1rem 18.8rem 0.1rem;
   }
 
   header {
@@ -163,17 +163,11 @@ p.description {
   }
 
   .hero-text-box {
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
 
   .hero-img {
-    width: 105%;
+    width: 103%;
+    transform: rotateZ(-6.2deg);
   }
-
-  // .delivered-imgs img {
-  //   height: 4.5rem;
-  //   width: 4.5rem;
-  //   border-radius: 50%;
-  //   margin-right: -1.1rem;
-  // }
 }
