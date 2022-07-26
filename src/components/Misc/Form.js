@@ -26,7 +26,7 @@ const Form = () => {
             <input type='hidden' name='form-name' value='contact' />
 
             <p class='form__group'>
-              <label for='name' class='form__label'>
+              <label htmlFor='name' className='form__label'>
                 Your Name:
                 <input
                   type='text'
@@ -40,14 +40,14 @@ const Form = () => {
             </p>
 
             <p class='form__group'>
-              <label for='date' class='form__label'>
+              <label htmlFor='date' class='form__label'>
                 Date:
                 <input id='date' type='date' name='date' class='form__input' />
               </label>
             </p>
 
             <p class='form__group'>
-              <label class='form__label'>
+              <label htmlFor='service' class='form__label'>
                 Service Type
                 <select class='form__input' name='service[]' id='service-type'>
                   <option value='Wedding' selected>
