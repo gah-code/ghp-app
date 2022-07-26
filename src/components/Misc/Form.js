@@ -61,7 +61,7 @@ const Form = () => {
             </p>
 
             <p>
-              <button className='btn' type='submit'>
+              <button value='Submit message' className='btn' type='submit'>
                 Send
               </button>
             </p>
