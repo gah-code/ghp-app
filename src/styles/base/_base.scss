@@ -26,3 +26,37 @@ body {
   overflow: hidden;
   background-color: var(--color-background);
 }
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.6rem 4rem;
+  border-radius: 5rem;
+  position: relative;
+  margin: 0 1rem;
+  color: var(--color-primary-dark);
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease-in;
+  background-color: var(--color-background);
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 1rem 2rem rgba(#444, 0.2);
+  color: var(--color-background-two);
+}
+
+@media (max-width: 44em) {
+  .btn {
+    padding: 1.6rem 3.5rem;
+    font-size: 1.666rem;
+  }
+}

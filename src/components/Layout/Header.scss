@@ -19,17 +19,15 @@ header {
   padding: 0 0.1rem;
   // background-color: var(--co);
 
-  h1 {
-    font-weight: 400;
+  .hero-text-box h1 {
     text-transform: uppercase;
     margin: 0 0 1rem;
   }
 }
 
-.description p {
+p.description {
   font-size: 1.6rem;
-  margin: 0.5rem;
-  padding: 0.2rem 0;
+  padding: 2rem 0;
 }
 
 .hero-img {
@@ -45,7 +43,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  margin-top: 4rem;
+  padding: 3rem 0;
 }
 
 .delivered-imgs {
@@ -81,25 +79,25 @@ header {
 
 @media (max-width: 84em) {
   header {
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 }
 
 @media (max-width: 75em) {
   header {
     padding: 0 2.9rem;
-    gap: 6rem;
+    gap: 4rem;
   }
 
   .delivered-meals {
-    margin-top: 2.8rem;
+    padding-top: 2.8rem;
   }
 }
 
 @media (max-width: 59em) {
   header {
     padding: 0 2rem;
-    gap: 5rem;
+    gap: 3rem;
   }
 
   .hero-img {
@@ -109,7 +107,7 @@ header {
 
   .delivered-meals {
     justify-content: center;
-    margin-top: 2.5rem;
+    padding-top: 2rem;
   }
 
   .delivered-text span {
@@ -120,29 +118,34 @@ header {
 @media (max-width: 44em) {
   .section-hero {
     background-color: var(--color-background-two);
-    padding: 5rem 0 25.8rem 0;
+    padding: 8rem 0 20.5rem 0;
   }
 
   header {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
-    padding: 0 1.3rem;
+    padding: 0 2.8rem;
+  }
+
+  .hero-img {
+    padding: 0.2rem 1rem;
   }
 
   .hero-text-box {
     padding: 1.5rem 0;
-    text-align: center;
-  }
+    // text-align: center;
+    text-align: left;
 
-  .description {
-    padding: 3rem 0;
-    font-size: 1.6rem;
+    .description {
+      padding: 2.5rem 1rem;
+      font-size: 1.8rem;
+    }
   }
 
   .delivered-meals {
+    display: none;
     justify-content: center;
-    margin: -0.2rem 0 0.2rem 0;
   }
 
   .delivered-text span {
@@ -152,24 +155,25 @@ header {
 
 @media (max-width: 34em) {
   .section-hero {
-    padding: 5rem 0.2rem 18rem 0.2rem;
+    padding: 5rem 0.1rem 18.5rem 0.1rem;
   }
 
   header {
-    height: 78vh;
+    height: 85vh;
   }
 
-  .description {
-    padding: 1.8rem 0;
+  .hero-text-box {
+    padding-bottom: 2.5rem;
   }
+
   .hero-img {
-    padding: 0 1rem;
+    width: 105%;
   }
 
-  .delivered-imgs img {
-    height: 4.5rem;
-    width: 4.5rem;
-    border-radius: 50%;
-    margin-right: -1.1rem;
-  }
+  // .delivered-imgs img {
+  //   height: 4.5rem;
+  //   width: 4.5rem;
+  //   border-radius: 50%;
+  //   margin-right: -1.1rem;
+  // }
 }

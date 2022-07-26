@@ -6,79 +6,68 @@ import './form.scss';
 
 const Form = () => {
   return (
-    <section className="section-form">
-      <div className="container">
-        <h2 class="subheading">Booking</h2>
-        <h3 class="heading-secondary"> Looking forward to hearing from you</h3>
+    <section className='section-form'>
+      <div className='container'>
+        <h2 class='subheading'>Booking</h2>
+        <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
       {/* <TestForm /> */}
 
-      <form
-        class="cta-form"
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        onSubmit="submit"
-      >
-        <input type="hidden" name="form-name" value="contact" />
+      <div class='row'>
+        <div class='book__form'>
+          <form
+            class='cta-form'
+            name='contact'
+            method='POST'
+            data-netlify='true'
+            onSubmit='submit'
+          >
+            <input type='hidden' name='form-name' value='contact' />
 
-        <div className="form-group">
-          <div className="form-container">
+            <p class='form__group'>
+              <label for='name' class='form__label'>
+                Your Name:
+                <input
+                  type='text'
+                  name='name'
+                  class='form__input'
+                  placeholder='Full name'
+                  id='name'
+                  required
+                />
+              </label>
+            </p>
 
-            <label htmlFor="full-name" class="custom-field one">
-              <input
-                id="full-name"
-                type="text"
-                placeholder="&nbsp;"
-                required
-                name="fullname"
-              />
-              <span class="placeholder">Enter Name</span>
-            </label>
-            <label htmlFor="email" class="custom-field one">
-              <input
-                id="email"
-                type="email"
-                placeholder=" "
-                name="email"
-                required
-              />
-              <span class="placeholder">Enter Email</span>
-            </label>
-            <label htmlFor="service" class="custom-field one">
-              <input
-                id="service"
-                type="text"
-                placeholder=" "
-                name="service"
-                // required
-              />
-              <span class="placeholder">Enter Service</span>
-            </label>
+            <p class='form__group'>
+              <label for='date' class='form__label'>
+                Date:
+                <input id='date' type='date' name='date' class='form__input' />
+              </label>
+            </p>
 
-            <button
-              className="form-button"
-              type="submit"
-              value="Submit message"
-            >
-              Send
-            </button>
+            <p class='form__group'>
+              <label class='form__label'>
+                Service Type
+                <select class='form__input' name='service[]' id='service-type'>
+                  <option value='Wedding' selected>
+                    Wedding
+                  </option>
+                  <option value='Family'>Family</option>
+                  <option value='Engagement'>Engagement</option>
+                  <option value='other'>Other</option>
+                </select>
+              </label>
+            </p>
 
-            <label htmlFor="service" className="form-control">
-              {/* <input type="checkbox" id="service" value="Wedding" />
-              <p> wedding</p> */}
-
-              {/* <input type="radio" id="service" name="service" value="Family" />
-              <p> Family</p> */}
-
-            </label>
-
-          </div>
+            <p>
+              <button className='btn' type='submit'>
+                Send
+              </button>
+            </p>
+          </form>
         </div>
-
-      </form>
-
+      </div>
     </section>
   );
 };
