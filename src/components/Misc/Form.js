@@ -21,8 +21,9 @@ const Form = () => {
             data-netlify='true'
             class='cta-form'
             name='contact-form'
-            method='post'
+            method='POST'
             onSubmit='submit'
+            data-netlify-recaptcha='true'
           >
             <input type='hidden' name='form-name' value='contact-form' />
 
@@ -60,7 +61,7 @@ const Form = () => {
                 </select>
               </label>
             </p>
-
+            <div data-netlify-recaptcha='true'></div>
             <p>
               <button value='Submit message' className='btn' type='submit'>
                 Send
