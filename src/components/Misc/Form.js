@@ -1,4 +1,5 @@
 // import TestForm from './index';
+import React from 'react';
 import './form.scss';
 
 //// NOTE: Finshied Form Btn
@@ -17,13 +18,13 @@ const Form = () => {
       <div class='row'>
         <div class='book__form'>
           <form
-            class='cta-form'
-            name='contact'
-            method='POST'
             data-netlify='true'
+            class='cta-form'
+            name='contact-form'
+            method='post'
             onSubmit='submit'
           >
-            <input type='hidden' name='form-name' value='contact' />
+            <input type='hidden' name='form-name' value='contact-form' />
 
             <p class='form__group'>
               <label htmlFor='name' className='form__label'>
