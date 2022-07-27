@@ -71,7 +71,13 @@ const Form = () => {
           field='message'
           errors={state.errors}
         /> */}
-        <Checkbox state={checked} setState={setChecked} onChange={onChange}>
+        <Checkbox
+          htmlFor='service'
+          state={checked}
+          setState={setChecked}
+          onChange={onChange}
+          value='wedding'
+        >
           Checked: {checked + ''}
         </Checkbox>
         <div>
