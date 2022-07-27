@@ -1,18 +1,8 @@
-// import TestForm from './index';
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Checkbox } from 'pretty-checkbox-react';
-
-import '@djthoms/pretty-checkbox';
-import './form.scss';
 
 const Form = () => {
   const [state, handleSubmit] = useForm('mpzbvndl');
-  const [checked, setChecked] = useState(false);
-
-  const onChange = React.useCallback(() => {
-    setChecked((prev) => !prev);
-  }, []);
 
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
@@ -71,15 +61,6 @@ const Form = () => {
           field='message'
           errors={state.errors}
         /> */}
-        <Checkbox
-          htmlFor='service'
-          state={checked}
-          setState={setChecked}
-          onChange={onChange}
-          value='wedding'
-        >
-          Checked: {checked + ''}
-        </Checkbox>
         <div>
           <button className='btn' type='submit' disabled={state.submitting}>
             Submit
