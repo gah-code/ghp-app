@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
+import './form.scss';
+
 const Form = () => {
   const [state, handleSubmit] = useForm('mpzbvndl');
 
@@ -68,10 +70,6 @@ const Form = () => {
           <ValidationError errors={state.errors} />
         </div>
       </form>
-
-      {/* <ContactForm /> */}
-
-      {/* <TestForm /> */}
     </section>
   );
 };
