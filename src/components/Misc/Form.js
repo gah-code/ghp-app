@@ -12,6 +12,7 @@ function encode(data) {
 }
 
 const Form = () => {
+  const [msg, setmsg] = React.useState(null);
   // const [state, handleSubmit] = useForm('mpzbvndl');
 
   const handleSubmit = (e) => {
@@ -24,7 +25,9 @@ const Form = () => {
         name: form.name.value,
         email: form.email.value,
       }),
-    });
+    })
+      .then(() => setmsg('success!'))
+      .catch((error) => alert(error));
   };
   // if (state.succeeded) {
   //   return <p>Thanks for your submission!</p>;
@@ -68,7 +71,9 @@ const Form = () => {
           </label>
         </p>
         <p>
-          <button type='submit'>Send</button>
+          <button className='btn' type='submit' onSubmit={handleSubmit}>
+            Send
+          </button>
         </p>
 
         {/* <p>
