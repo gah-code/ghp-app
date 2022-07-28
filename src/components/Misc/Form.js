@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import './form.scss';
 
 const Form = () => {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM);
+  const [state, handleSubmit] = useForm('mpzbvndl');
 
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
