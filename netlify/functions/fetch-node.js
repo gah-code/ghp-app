@@ -1,27 +1,38 @@
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
+var FormData = require('form-data');
+const util = require('util');
 
-const handler = async function () {
+function encode(data) {
+  const formData = new FormData();
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+
+  return formData;
+}
+
+const handler = async function (event, context) {
+  const form = encode(event.body);
   try {
-    const response = await fetch('https://icanhazdadjoke.com', {
-      headers: { Accept: 'application/json' },
-    });
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response.statusText };
-    }
-    const data = await response.json();
-
+    await util.promisify((err, res) =>
+      form.submit(
+        'https://gatsby-netlify-form-example-v2.netlify.com',
+        function (err, res) {
+          // res – response object (http.IncomingMessage)  //
+          res.resume();
+        }
+      )
+    );
     return {
       statusCode: 200,
-      body: JSON.stringify({ msg: data.joke }),
+      body: 'gucci',
     };
-  } catch (error) {
-    // output to netlify function log
-    console.log(error);
+  } catch (err) {
+    console.log(err); // output to netlify function log
     return {
       statusCode: 500,
-      // Could be a custom message or object i.e. JSON.stringify(err)
-      body: JSON.stringify({ msg: error.message }),
+      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
     };
   }
 };

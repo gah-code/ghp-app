@@ -4,9 +4,13 @@ import React from 'react';
 import './form.scss';
 
 function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
+  const formData = new FormData();
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+
+  return formData;
 }
 
 const Form = () => {
@@ -16,21 +20,23 @@ const Form = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
+  // const handleAttachment = (e) => {
+  //   setState({ ...state, [e.target.name]: e.target.files[0] });
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
+    fetch('/https://ghphoto.netlify.app/.netlify/functions/fetch-node', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
         ...state,
       }),
     })
-      .then(() => console.log('success!'))
+      .then(() => console.log('success'))
       .catch((error) => alert(error));
   };
-
   return (
     <section className='section-form'>
       <div className='container'>
@@ -64,12 +70,8 @@ const Form = () => {
             Your Role:
             <br />
             <select name='role[]' multiple>
-              <option value='leader' onChange={handleChange}>
-                Leader
-              </option>
-              <option value='follower' onChange={handleChange}>
-                Follower
-              </option>
+              <option value='leader'>Leader</option>
+              <option value='follower'>Follower</option>
             </select>
           </label>
         </p>
@@ -77,7 +79,7 @@ const Form = () => {
           <label>
             Message:
             <br />
-            <textarea name='message' onChange={handleChange}></textarea>
+            <textarea name='message'></textarea>
           </label>
         </p>
         <p>
