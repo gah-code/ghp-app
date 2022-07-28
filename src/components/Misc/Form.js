@@ -3,40 +3,40 @@ import React from 'react';
 
 import './form.scss';
 
-function encode(data) {
-  const formData = new FormData();
+// function encode(data) {
+//   const formData = new FormData();
 
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
+//   for (const key of Object.keys(data)) {
+//     formData.append(key, data[key]);
+//   }
 
-  return formData;
-}
+//   return formData;
+// }
 
 const Form = () => {
-  const [state, setState] = React.useState({});
+  // const [state, setState] = React.useState({});
 
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
-  };
-
-  // const handleAttachment = (e) => {
-  //   setState({ ...state, [e.target.name]: e.target.files[0] });
+  // const handleChange = (e) => {
+  //   setState({ ...state, [e.target.name]: e.target.value });
   // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch('/https://ghphoto.netlify.app/.netlify/functions/fetch-node', {
-      method: 'POST',
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => console.log('success'))
-      .catch((error) => alert(error));
-  };
+  // // const handleAttachment = (e) => {
+  // //   setState({ ...state, [e.target.name]: e.target.files[0] });
+  // // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const form = e.target;
+  //   fetch('/https://ghphoto.netlify.app/.netlify/functions/fetch-node', {
+  //     method: 'POST',
+  //     body: encode({
+  //       'form-name': form.getAttribute('name'),
+  //       ...state,
+  //     }),
+  //   })
+  //     .then(() => console.log('success'))
+  //     .catch((error) => alert(error));
+
   return (
     <section className='section-form'>
       <div className='container'>
@@ -48,42 +48,33 @@ const Form = () => {
         name='contact-form'
         method='post'
         data-netlify='true'
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
         <input type='hidden' name='form-name' value='contact-form' />
+        <input
+          type='hidden'
+          name='subject'
+          value='Sales inquiry from https://ghphoto.netlify.app'
+        />
         <p>
           <label>
-            Your Name:
-            <br />
-            <input type='text' name='name' onChange={handleChange} />
+            Your Name: <input type='text' name='name' />
           </label>
         </p>
         <p>
           <label>
-            Your Email:
-            <br />
-            <input type='email' name='email' onChange={handleChange} />
+            Your Email: <input type='email' name='email' />
           </label>
         </p>
         <p>
           <label>
-            Your Role:
-            <br />
-            <select name='role[]' multiple>
-              <option value='leader'>Leader</option>
-              <option value='follower'>Follower</option>
-            </select>
+            Message: <textarea name='message'></textarea>
           </label>
         </p>
         <p>
-          <label>
-            Message:
-            <br />
-            <textarea name='message'></textarea>
-          </label>
-        </p>
-        <p>
-          <button type='submit'>Send</button>
+          <button className='btn' type='submit'>
+            Send now
+          </button>
         </p>
       </form>
     </section>
