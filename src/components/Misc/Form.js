@@ -1,14 +1,14 @@
 import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+// import { useForm, ValidationError } from '@formspree/react';
 
 import './form.scss';
 
 const Form = () => {
-  const [state, handleSubmit] = useForm('mpzbvndl');
+  // const [state, handleSubmit] = useForm('mpzbvndl');
 
-  if (state.succeeded) {
-    return <p>Thanks for your submission!</p>;
-  }
+  // if (state.succeeded) {
+  //   return <p>Thanks for your submission!</p>;
+  // }
   return (
     <section className='section-form'>
       <div className='container'>
@@ -16,8 +16,41 @@ const Form = () => {
         <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
-      <form className='form' onSubmit={handleSubmit}>
+      <form
+        name='contact'
+        method='POST'
+        data-netlify='true'
+        // onSubmit={handleSubmit}
+      >
         <p>
+          <label>
+            Your Name: <input type='text' name='name' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type='email' name='email' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{' '}
+            <select name='role[]' multiple>
+              <option value='leader'>Leader</option>
+              <option value='follower'>Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name='message'></textarea>
+          </label>
+        </p>
+        <p>
+          <button type='submit'>Send</button>
+        </p>
+
+        {/* <p>
           <label className='form__label' htmlFor='email'>
             Email Address
           </label>
@@ -56,7 +89,7 @@ const Form = () => {
           <option value='Customer Care'>Customer Care</option>
           <option value='Shipping Receiving'>Shipping / Receiving</option>
           <option value='Billing Accounting'>Billing / Accounting</option>
-        </select>
+        </select> */}
         {/* <textarea id='message' name='message' />
         <ValidationError
           prefix='Message'
