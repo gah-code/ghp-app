@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prepublish": "ech $my_secret",
+    "prepublish": "echo $my_secret",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
