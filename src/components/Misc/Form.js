@@ -22,7 +22,7 @@ const Form = () => {
         data-netlify='true'
         // onSubmit={handleSubmit}
       >
-      <input type="hidden" name="form-name" value="contact">
+        <input type='hidden' name='form-name' value='contact' />
         <p>
           <label>
             Your Name: <input type='text' name='name' />
@@ -97,12 +97,6 @@ const Form = () => {
           field='message'
           errors={state.errors}
         /> */}
-        <div>
-          {/* <button className='btn' type='submit'>
-            Submit
-          </button> */}
-          {/* <ValidationError errors={state.errors} /> */}
-        </div>
       </form>
     </section>
   );
