@@ -3,9 +3,29 @@ import React from 'react';
 
 import './form.scss';
 
+function encode(data) {
+  const formData = new FormData();
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+  return formData;
+}
+
 const Form = () => {
   // const [state, handleSubmit] = useForm('mpzbvndl');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        name: form.name.value,
+        email: form.email.value,
+      }),
+    });
+  };
   // if (state.succeeded) {
   //   return <p>Thanks for your submission!</p>;
   // }
@@ -17,10 +37,10 @@ const Form = () => {
       </div>
 
       <form
+        onSubmit={handleSubmit}
         name='contact'
         method='POST'
         data-netlify='true'
-        // onSubmit={handleSubmit}
       >
         <input type='hidden' name='form-name' value='contact' />
         <p>
