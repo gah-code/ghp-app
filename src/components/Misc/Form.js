@@ -12,7 +12,7 @@ function encode(data) {
 }
 
 const Form = () => {
-  const [msg, setmsg] = React.useState(null);
+  // const [msg, setmsg] = React.useState(null);
   // const [state, handleSubmit] = useForm('mpzbvndl');
 
   const handleSubmit = (e) => {
@@ -22,12 +22,12 @@ const Form = () => {
       method: 'POST',
       body: encode({
         'form-name': form.getAttribute('name'),
-        name: form.name.value,
+        fullName: form.fullName.value,
         email: form.email.value,
       }),
-    })
-      .then(() => setmsg('success!'))
-      .catch((error) => alert(error));
+    });
+    // .then(() => setmsg('success!'))
+    // .catch((error) => alert(error));
   };
   // if (state.succeeded) {
   //   return <p>Thanks for your submission!</p>;
@@ -48,7 +48,7 @@ const Form = () => {
         <input type='hidden' name='form-name' value='contact' />
         <p>
           <label>
-            Your Name: <input type='text' name='name' />
+            Your Name: <input type='text' name='fullName' />
           </label>
         </p>
         <p>
