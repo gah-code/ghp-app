@@ -27,7 +27,7 @@ const Form = () => {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => console.log('success!'))
       .catch((error) => alert(error));
   };
 
