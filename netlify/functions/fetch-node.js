@@ -13,6 +13,7 @@ function encode(data) {
 }
 
 const handler = async function (event, context) {
+  const body = event;
   const form = encode(event.body);
   try {
     await util.promisify((err, res) =>
@@ -26,7 +27,7 @@ const handler = async function (event, context) {
     );
     return {
       statusCode: 200,
-      body: 'gucci',
+      body: JSON.stringify({ msg: body.formData }),
     };
   } catch (err) {
     console.log(err); // output to netlify function log
