@@ -44,12 +44,7 @@ const Form = () => {
         <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
-      <form
-        name='contact-form'
-        method='post'
-        data-netlify='true'
-        // onSubmit={handleSubmit}
-      >
+      <form name='contact-form' method='post' data-netlify='true'>
         <input type='hidden' name='form-name' value='contact-form' />
         <input
           type='hidden'
