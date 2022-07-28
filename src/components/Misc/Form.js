@@ -22,7 +22,7 @@ const Form = () => {
       method: 'POST',
       body: encode({
         'form-name': form.getAttribute('name'),
-        fullName: form.fullName.value,
+        fullname: form.fullName.value,
         email: form.email.value,
       }),
     });
@@ -39,16 +39,11 @@ const Form = () => {
         <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        name='contact'
-        method='POST'
-        data-netlify='true'
-      >
+      <form onSubmit={handleSubmit} name='contact' data-netlify='true'>
         <input type='hidden' name='form-name' value='contact' />
         <p>
           <label>
-            Your Name: <input type='text' name='fullName' />
+            Your Name: <input type='text' name='fullname' />
           </label>
         </p>
         <p>
