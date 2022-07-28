@@ -25,7 +25,7 @@ const handler = async function (event, context) {
     );
     return {
       statusCode: 200,
-      body: JSON.stringify(body.formData()),
+      body: JSON.stringify(body.formData),
     };
   } catch (err) {
     console.log(err); // output to netlify function log
