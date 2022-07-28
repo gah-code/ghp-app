@@ -71,7 +71,7 @@ const Form = () => {
           </label>
         </p>
         <p>
-          <button className='btn' type='submit' onSubmit={handleSubmit}>
+          <button className='btn' type='submit' onClick={handleSubmit}>
             Send
           </button>
         </p>
