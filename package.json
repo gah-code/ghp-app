@@ -44,6 +44,11 @@
   },
   "devDependencies": {
     "netlify-cli": "^10.7.1",
+    "parcel": "^2.6.2",
     "sass": "^1.52.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/gah-code/ghp-app.git",
+  "author": "Gilbert Haro <gilbertharocode@gmail.com>",
+  "license": "MIT"
 }
