@@ -4,34 +4,33 @@ import React from 'react';
 import './form.scss';
 
 function encode(data) {
-  const formData = new FormData();
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
-  return formData;
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 }
 
 const Form = () => {
-  // const [msg, setmsg] = React.useState(null);
-  // const [state, handleSubmit] = useForm('mpzbvndl');
+  const [state, setState] = React.useState({});
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     fetch('/', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        fullname: form.fullName.value,
-        email: form.email.value,
+        ...state,
       }),
-    });
-    // .then(() => setmsg('success!'))
-    // .catch((error) => alert(error));
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
   };
-  // if (state.succeeded) {
-  //   return <p>Thanks for your submission!</p>;
-  // }
+
   return (
     <section className='section-form'>
       <div className='container'>
@@ -39,36 +38,45 @@ const Form = () => {
         <h3 class='heading-secondary'> Looking forward to hearing from you</h3>
       </div>
 
-      <form onSubmit={handleSubmit} name='contact' data-netlify='true'>
+      <form
+        name='contact'
+        method='post'
+        data-netlify='true'
+        onSubmit={handleSubmit}
+      >
         <input type='hidden' name='form-name' value='contact' />
         <p>
           <label>
-            Your Name: <input type='text' name='fullname' />
+            Your Name: <input type='text' name='name' onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Your Email: <input type='email' name='email' />
+            Your Email:{' '}
+            <input type='email' name='email' onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
             Your Role:{' '}
             <select name='role[]' multiple>
-              <option value='leader'>Leader</option>
-              <option value='follower'>Follower</option>
+              <option value='leader' onChange={handleChange}>
+                Leader
+              </option>
+              <option value='follower' onChange={handleChange}>
+                Follower
+              </option>
             </select>
           </label>
         </p>
         <p>
           <label>
-            Message: <textarea name='message'></textarea>
+            Message:{' '}
+            <textarea name='message' onChange={handleChange}></textarea>
           </label>
         </p>
         <p>
-          <button className='btn' type='submit'>
-            Send
-          </button>
+          <button type='submit'>Send</button>
         </p>
 
         {/* <p>
