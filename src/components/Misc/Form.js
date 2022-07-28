@@ -97,10 +97,10 @@ const Form = () => {
           errors={state.errors}
         /> */}
         <div>
-          <button className='btn' type='submit' disabled={state.submitting}>
+          <button className='btn' type='submit'>
             Submit
           </button>
-          <ValidationError errors={state.errors} />
+          {/* <ValidationError errors={state.errors} /> */}
         </div>
       </form>
     </section>
