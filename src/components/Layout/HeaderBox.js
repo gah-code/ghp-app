@@ -9,13 +9,14 @@ const HeroBox = () => {
   return (
     <div className='hero-text-box'>
       <h1 className='heading-primary'>
-        {' '}
-        Booking a photographer made simple & personalized
-        {/* A laugh today a <strong>memory</strong> tomorrow */}
+        Booking a photographer made simple as smiling for a photo
       </h1>
       <p className='description'>
         Start today and save time scheduling services for your most cherished
-        momments
+        {/* A laugh today a memory tomorrow */}
+        {/* made simple & personalized */}
+        {/* Start today and save time scheduling services for your most cherished
+        momments */}
         {/* Capturing; stories, experiences and life through calculated clicks
         for present ones and future generations to come.. */}
       </p>

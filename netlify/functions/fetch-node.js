@@ -18,7 +18,7 @@ const handler = async function (event, context) {
   const form = encode(event.body);
   try {
     await util.promisify((err, res) =>
-      form.submit('https://ghphoto.netlify.app', function (err, res) {
+      form.submit('https://ghphoto.netlify.app/', function (err, res) {
         // res – response object (http.IncomingMessage)  //
         res.resume();
       })
